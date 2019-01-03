@@ -32,9 +32,10 @@
   padding-top: 140px;
   margin-bottom: 10px;
 }
-.btn-signup {
-  width: 50px;
-  border-radius: 2rem;
-  background-color: red;
+.hero button {
+  width: 150px;
+  border-radius: 1px;
+  background-color: light gray;
+  font-weight: bold;
 }
 

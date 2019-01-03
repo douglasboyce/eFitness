@@ -8,18 +8,14 @@ function About() {
   return (
     <div>
       <Hero backgroundImage="http://www.creditlenders.info/wp-content/uploads/eco-gym-human-powered-gyms-make-watts-from-your-workout-ecopedia.png">
-        <h1>eFitness</h1>
+        <h1><i>e</i>Fitness</h1>
         <h2>A Health Information and Exercise Log</h2>
+        <button id="btn-signup" type="button">Sign Up</button>
       </Hero>
       <Container style={{ marginTop: 30 }}>
         <Row>
           <Col size="md-12">
-            <h1>eFitness</h1>
-          </Col>
-        </Row>
-        <Row>
-          <Col size="md-12">
-            <button id="btn-signup"></button>
+            <h1><i>e</i>Fitness</h1>
           </Col>
         </Row>
         <Row>
