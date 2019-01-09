@@ -12,7 +12,7 @@ class Discover extends Component {
 
   // When the component mounts, load the next dog to be displayed
   componentDidMount() {
-    this.loadNextDog();
+    this.loadDBPData();
   }
 
   handleBtnClick = event => {
