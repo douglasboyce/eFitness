@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "systolic": 120,
+        "diastolic": 86,
+        "pulse": 78,
+        "weight": 144
+    },
+    {
+        "id": 2,
+        "systolic": 126,
+        "diastolic": 82,
+        "pulse": 80,
+        "weight": 141
+    }
+]
