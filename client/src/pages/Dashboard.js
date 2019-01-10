@@ -2,8 +2,7 @@ import React from "react";
 import Container from "../components/Container";
 import Row from "../components/Row";
 import Col from "../components/Col";
-import chart from "./components/chart"
-import Data from "./Data.json";
+import Chart from "../components/chart"
 
 
 function Dashboard() {
