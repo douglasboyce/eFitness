@@ -1,3 +1,3 @@
 module.exports = {
-  BPChart: require("./BPChart")
+  BPList: require("./BPList")
 };
