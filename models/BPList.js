@@ -21,6 +21,6 @@ const BloodPressureList = new Schema({
     }
 });
 
-const BPChart = mongoose.model("BPList", BloodPressureList);
+const BPList = mongoose.model("BPList", BloodPressureList);
 
-module.exports = BPList;
+module.exports = BloodPressureList;
