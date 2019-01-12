@@ -35,7 +35,7 @@ function Navbar() {
               <h3>myDashboard</h3>
             </Link>
           </li>
-          </ul>
+    </ul>
       </div>
     </nav>
   );

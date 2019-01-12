@@ -25,6 +25,7 @@
 .hero h1, .hero h2 {
   color: white;
   text-align: center;
+  font-family: 'Oswald', sans-serif;
 }
 
 .hero h1 {

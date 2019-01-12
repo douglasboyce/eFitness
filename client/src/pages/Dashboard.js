@@ -1,11 +1,62 @@
-import React from "react";
+import React, { Component } from 'react';
+// import API from "../utils/API";
 import Container from "../components/Container";
 import Row from "../components/Row";
 import Col from "../components/Col";
-import Chart from "../components/chart"
+import Chart from "../components/BPChart"
+import BPdata from "../data.json"
 
+class Dashboard extends Component {
+  constructor(){
+    super();
+    this.state = {
+     BPdata
+    }
+  }
 
-function Dashboard() {
+  componentWillMount(){
+    this.getChartData();
+  }
+
+  getChartData(){
+    // Ajax calls here
+    // API.getBPData()
+    //   .then(res => this.setState({ BPData: res.data }))
+    //   .catch(err => console.log(err));
+    const systolic  = BPdata;
+    console.log(systolic);
+
+    this.setState({
+      chartData:{
+        labels: ['Monday', 'Tuesday', 'Wednsday', 'Thursday', 'Friday', 'Saturday'],
+        datasets:[
+          {
+            label:'BP for the Week',
+            data:[
+              120,
+              128,
+              122,
+              118,
+              124,
+              132
+            ],
+            backgroundColor:[
+              'rgba(255, 99, 132, 0.6)',
+              'rgba(54, 162, 235, 0.6)',
+              'rgba(255, 206, 86, 0.6)',
+              'rgba(75, 192, 192, 0.6)',
+              'rgba(153, 102, 255, 0.6)',
+              'rgba(255, 159, 64, 0.6)',
+              'rgba(255, 99, 132, 0.6)'
+            ]
+          }
+        ]
+      }
+      
+    });
+  } 
+
+render() {
   return (
     <div>
 
@@ -22,50 +73,27 @@ function Dashboard() {
           </Col>
           <Col size="md-6">
           <h3>Exercise Log</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet diam tortor, id
-              consequat mauris ullamcorper eu. Orci varius natoque penatibus et magnis dis
-              parturient montes, nascetur ridiculus mus. Pellentesque et dui id justo finibus
-              sollicitudin at et metus. Ut feugiat tellus nec metus commodo, sed suscipit nisi
-              gravida. Duis eget vestibulum quam, ut porttitor sem. Donec sagittis mi sollicitudin
-              turpis semper, et interdum risus lobortis. Vestibulum suscipit nunc non egestas
-              tristique. Proin hendrerit efficitur malesuada. Mauris lorem urna, sodales accumsan
-              quam non, tristique tempor erat. Nullam non sem facilisis, tempus tortor sit amet,
-              volutpat nisl. Ut et turpis non nunc maximus mollis a vitae tortor. Pellentesque
-              mattis risus ac quam laoreet cursus. Praesent suscipit orci neque, vestibulum
-              tincidunt augue tincidunt non. Duis consequat mattis tortor vitae mattis.
-            </p>
+            Exercise Log Placeholder
           </Col>
         </Row>
         <Row>
           <Col size="md-6">
           <hr/>
           <h3>BP Chart</h3>
-            <chart />
+          <Chart chartData={this.state.chartData} week="1" legendPosition="bottom"/>
           </Col>
           <Col size="md-6">
           <hr />
           <h3>Fitness / Outdoor Meet-Up</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet diam tortor, id
-              consequat mauris ullamcorper eu. Orci varius natoque penatibus et magnis dis
-              parturient montes, nascetur ridiculus mus. Pellentesque et dui id justo finibus
-              sollicitudin at et metus. Ut feugiat tellus nec metus commodo, sed suscipit nisi
-              gravida. Duis eget vestibulum quam, ut porttitor sem. Donec sagittis mi sollicitudin
-              turpis semper, et interdum risus lobortis. Vestibulum suscipit nunc non egestas
-              tristique. Proin hendrerit efficitur malesuada. Mauris lorem urna, sodales accumsan
-              quam non, tristique tempor erat. Nullam non sem facilisis, tempus tortor sit amet,
-              volutpat nisl. Ut et turpis non nunc maximus mollis a vitae tortor. Pellentesque
-              mattis risus ac quam laoreet cursus. Praesent suscipit orci neque, vestibulum
-              tincidunt augue tincidunt non. Duis consequat mattis tortor vitae mattis.
-            </p>
+            Meet-up Group List
           </Col>
         </Row>
         </Container>
 
 
     </div>
-  );
-}
+    );
+  };
+};
 
 export default Dashboard;
