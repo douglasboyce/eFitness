@@ -5,12 +5,20 @@ import Row from "../components/Row";
 import Col from "../components/Col";
 import Chart from "../components/BPChart"
 import BPdata from "../data.json"
+//
+import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
+//import injectTapEventPlugin from "react-tap-event-plugin";
+import {Table, Form} from "material-ui/Table";
+//injectTapEventPlugin();
 
+//
 class Dashboard extends Component {
   constructor(){
     super();
     this.state = {
-     BPdata
+     BPdata,
+     data: [],
+     editIdx: -1
     }
   }
 
@@ -55,7 +63,32 @@ class Dashboard extends Component {
       
     });
   } 
+//BPInput An BPTable//
 
+  handleRemove = i => {
+    this.setState(state => ({
+      data: state.data.filter((row, j) => j !== i)
+    }));
+  };
+
+  startEditing = i => {
+    this.setState({ editIdx: i });
+  };
+
+  stopEditing = () => {
+    this.setState({ editIdx: -1 });
+  };
+
+  handleChange = (e, name, i) => {
+    const { value } = e.target;
+    this.setState(state => ({
+      data: state.data.map(
+        (row, j) => (j === i ? { ...row, [name]: value } : row)
+      )
+    }));
+  };
+
+//BPInput An BPTable//
 render() {
   return (
     <div>
@@ -70,6 +103,45 @@ render() {
           <Col size="md-6">
           <h3>Personal Information</h3>
             BP Table Placeholder
+        <MuiThemeProvider>
+          <Form
+            onSubmit={submission =>
+              this.setState({
+                data: [...this.state.data, submission]
+              })}
+          />
+          <Table
+            handleRemove={this.handleRemove}
+            startEditing={this.startEditing}
+            editIdx={this.state.editIdx}
+            stopEditing={this.stopEditing}
+            handleChange={this.handleChange}
+            data={this.state.data}
+            header={[
+              {
+              name: "Day Of The Week",
+              prop: "dayOfTheWeek"
+              },
+              {
+                name: "Diastolic",
+                prop: "diastolic"
+              },
+              {
+                name: "Systolic",
+                prop: "systolic"
+              },
+              {
+                prop: "pulserate",
+                name: "Pulserate"
+              },
+              {
+                name: "Weight",
+                prop: "weight"
+              },
+            ]}
+          />
+      </MuiThemeProvider>
+
           </Col>
           <Col size="md-6">
           <h3>Exercise Log</h3>
