@@ -35,6 +35,32 @@ function Navbar() {
               <h3>myDashboard</h3>
             </Link>
           </li>
+          {/**g added below this line */}
+          <li className="nav-item">
+            <Link
+              to="/sign in"
+              className={
+                window.location.pathname === "/" || window.location.pathname === "/dashboard"
+                  ? "nav-link active"
+                  : "nav-link"
+              }
+            >
+              <h3>Sign In </h3>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/sign up"
+              className={
+                window.location.pathname === "/" || window.location.pathname === "/dashboard"
+                  ? "nav-link active"
+                  : "nav-link"
+              }
+            >
+              <h3>Sign Up</h3>
+            </Link>
+          </li>
+          {/**g added line above this line */}
     </ul>
       </div>
     </nav>

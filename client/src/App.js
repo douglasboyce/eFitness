@@ -5,6 +5,10 @@ import Dashboard from "./pages/Dashboard";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
+//g  below this added this on 1/12/2019
+//import SigninForm from "./UserinPut/SignInForm";
+//import SignUpForm from "./UserinPut/SignInForm";
+
 
 function App() {
   return (
@@ -15,6 +19,7 @@ function App() {
           <Route exact path="/" component={About} />
           <Route exact path="/about" component={About} />
           <Route exact path="/dashboard" component={Dashboard}/>
+          
         </Wrapper>
         <Footer />
       </div>
