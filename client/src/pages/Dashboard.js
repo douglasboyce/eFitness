@@ -2,7 +2,7 @@ import React from "react";
 import Container from "../components/Container";
 import Row from "../components/Row";
 import Col from "../components/Col";
-import Chart from "../components/chart"
+import BarExample from "../components/chart"
 
 
 function Dashboard() {
@@ -41,7 +41,7 @@ function Dashboard() {
           <Col size="md-6">
           <hr/>
           <h3>BP Chart</h3>
-            <chart />
+            <BarExample />
           </Col>
           <Col size="md-6">
           <hr />
