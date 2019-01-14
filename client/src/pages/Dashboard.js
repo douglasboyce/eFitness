@@ -3,10 +3,15 @@ import React, { Component } from 'react';
 import Container from "../components/Container";
 import Row from "../components/Row";
 import Col from "../components/Col";
+
 import Chart from "../components/BPChart";
 import BPdata from "../data.json";
 import Form from "../components/Form";
 import Table from "../components/Table";
+
+import BarExample from "../components/chart"
+import Chart from "../components/BPChart"
+import BPdata from "../data.json"
 //
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 //import injectTapEventPlugin from "react-tap-event-plugin";
@@ -154,6 +159,8 @@ render() {
           <Col size="md-6">
           <hr/>
           <h3>BP Chart</h3>
+
+            <BarExample />
           <Chart chartData={this.state.chartData} week="1" legendPosition="bottom"/>
           </Col>
           <Col size="md-6">
