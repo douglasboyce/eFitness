@@ -3,12 +3,14 @@ import React, { Component } from 'react';
 import Container from "../components/Container";
 import Row from "../components/Row";
 import Col from "../components/Col";
-import Chart from "../components/BPChart"
-import BPdata from "../data.json"
+import Chart from "../components/BPChart";
+import BPdata from "../data.json";
+import Form from "../components/Form";
+import Table from "../components/Table";
 //
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 //import injectTapEventPlugin from "react-tap-event-plugin";
-import {Table, Form} from "material-ui/Table";
+//import {Table, Form} from "material-ui/Table";
 //injectTapEventPlugin();
 
 //

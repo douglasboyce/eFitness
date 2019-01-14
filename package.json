@@ -21,6 +21,7 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.2",
     "react-tap-event-plugin": "^3.0.3",
+    "react-webpack": "^0.4.1",
     "yarn": "^1.12.3"
   },
   "scripts": {
