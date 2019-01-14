@@ -4,14 +4,17 @@ import RaisedButton from "material-ui/RaisedButton";
 const formInput = {
   width: '50%',
 }
-export default class Form extends React.Component {
-  state = {
-    diastolic: "",
-    systolic: "",
-    pulserate: "",
-    weight: "",
-    dayOfTheWeek: ""
-  };
+class Form extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      diastolic: "",
+      systolic: "",
+      pulserate: "",
+      weight: "",
+      dayOfTheWeek: ""
+    }
+  }
 
   change = e => {
     this.setState({
@@ -95,3 +98,4 @@ export default class Form extends React.Component {
     );
   }
 }
+export default  Form;

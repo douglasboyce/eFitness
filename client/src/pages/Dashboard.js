@@ -3,13 +3,19 @@ import React, { Component } from 'react';
 import Container from "../components/Container";
 import Row from "../components/Row";
 import Col from "../components/Col";
+
+import Chart from "../components/BPChart";
+import BPdata from "../data.json";
+import Form from "../components/Form";
+import Table from "../components/Table";
+
 import BarExample from "../components/chart"
 import Chart from "../components/BPChart"
 import BPdata from "../data.json"
 //
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 //import injectTapEventPlugin from "react-tap-event-plugin";
-import {Table, Form} from "material-ui/Table";
+//import {Table, Form} from "material-ui/Table";
 //injectTapEventPlugin();
 
 //
@@ -153,11 +159,9 @@ render() {
           <Col size="md-6">
           <hr/>
           <h3>BP Chart</h3>
-<<<<<<< HEAD
+
             <BarExample />
-=======
           <Chart chartData={this.state.chartData} week="1" legendPosition="bottom"/>
->>>>>>> b96d0d3412a8fc9dcf2654bda5bb8fe6cd27c1ec
           </Col>
           <Col size="md-6">
           <hr />
