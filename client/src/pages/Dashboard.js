@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import API from "../utils/API";
 import Container from "../components/Container";
 import Row from "../components/Row";
 import Col from "../components/Col";
@@ -9,16 +8,6 @@ import BPdata from "../data.json";
 import Form from "../components/Form";
 import Table from "../components/Table";
 
-import BarExample from "../components/chart"
-import Chart from "../components/BPChart"
-import BPdata from "../data.json"
-//
-import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-//import injectTapEventPlugin from "react-tap-event-plugin";
-//import {Table, Form} from "material-ui/Table";
-//injectTapEventPlugin();
-
-//
 class Dashboard extends Component {
   constructor(){
     super();
@@ -27,6 +16,7 @@ class Dashboard extends Component {
      data: [],
      editIdx: -1
     }
+    // this.handleRemove = this.handleRemove.bind(this);
   }
 
   componentWillMount(){
@@ -43,7 +33,7 @@ class Dashboard extends Component {
 
     this.setState({
       chartData:{
-        labels: ['Monday', 'Tuesday', 'Wednsday', 'Thursday', 'Friday', 'Saturday'],
+        labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
         datasets:[
           {
             label:'BP for the Week',
@@ -86,13 +76,10 @@ class Dashboard extends Component {
     this.setState({ editIdx: -1 });
   };
 
-  handleChange = (e, name, i) => {
-    const { value } = e.target;
-    this.setState(state => ({
-      data: state.data.map(
-        (row, j) => (j === i ? { ...row, [name]: value } : row)
-      )
-    }));
+  handleChange = (event, label) => {
+    let data = this.state.data;
+    data[this.state.editIdx][label] = event.target.value;
+    this.setState({ data });
   };
 
 //BPInput An BPTable//
@@ -107,10 +94,9 @@ render() {
           </Col>
         </Row>
         <Row>
-          <Col size="md-6">
+          <Col size="md-12">
           <h3>Personal Information</h3>
             BP Table Placeholder
-        <MuiThemeProvider>
           <Form
             onSubmit={submission =>
               this.setState({
@@ -147,9 +133,9 @@ render() {
               },
             ]}
           />
-      </MuiThemeProvider>
-
           </Col>
+        </Row>
+        <Row>
           <Col size="md-6">
           <h3>Exercise Log</h3>
             Exercise Log Placeholder
@@ -160,13 +146,8 @@ render() {
           <hr/>
           <h3>BP Chart</h3>
 
-            <BarExample />
+            
           <Chart chartData={this.state.chartData} week="1" legendPosition="bottom"/>
-          </Col>
-          <Col size="md-6">
-          <hr />
-          <h3>Fitness / Outdoor Meet-Up</h3>
-            Meet-up Group List
           </Col>
         </Row>
         </Container>
