@@ -2,91 +2,71 @@ import React from "react";
 import {
   Table,
   TableBody,
-  TableHeader,
-  TableHeaderColumn,
+  TableHead,
   TableRow,
-  TableRowColumn
-} from "material-ui/Table";
-import EditIcon from "material-ui/svg-icons/image/edit";
-import TrashIcon from "material-ui/svg-icons/action/delete";
-import CheckIcon from "material-ui/svg-icons/navigation/check";
-import TextField from "material-ui/TextField";
+  TableCell
+} from "@material-ui/core";
+import MyTableRow from './row.js';
+
 const tbBody = {
   backgroundColor: '#588FDB',
   marginTop: '20'
 }
-const row = (
-  x,
-  i,
-  header,
-  handleRemove,
-  startEditing,
-  editIdx,
-  handleChange,
-  stopEditing
-) => {
-  const currentlyEditing = editIdx === i;
-  return (
-    <TableRow key={`tr-${i}`} selectable={false}>
-      {header.map((y, k) => (
-        <TableRowColumn key={`trc-${k}`}>
-          {currentlyEditing ? (
-            <TextField
-              name={y.prop}
-              onChange={e => handleChange(e, y.prop, i)}
-              value={x[y.prop]}
-            />
-          ) : (
-            x[y.prop]
-          )}
-        </TableRowColumn>
-      ))}
-      <TableRowColumn>
-        {currentlyEditing ? (
-          <CheckIcon onClick={() => stopEditing()} />
-        ) : (
-          <EditIcon onClick={() => startEditing(i)} />
-        )}
-      </TableRowColumn>
-      <TableRowColumn>
-        <TrashIcon onClick={() => handleRemove(i)} />
-      </TableRowColumn>
-    </TableRow>
-  );
-};
 
-export default ({
-  data,
-  header,
-  handleRemove,
-  startEditing,
-  editIdx,
-  handleChange,
-  stopEditing
-}) => (
-  <Table style={tbBody}>
-    <TableHeader>
-      <TableRow>
-        {header.map((x, i) => (
-          <TableHeaderColumn key={`thc-${i}`} style={{color: 'black', fontSize:'18', padding:'5'}}>{x.name}</TableHeaderColumn>
-        ))}
-        <TableHeaderColumn />
-        <TableHeaderColumn />
-      </TableRow>
-    </TableHeader>
-    <TableBody>
-      {data.map((x, i) =>
-        row(
-          x,
-          i,
-          header,
-          handleRemove,
-          startEditing,
-          editIdx,
-          handleChange,
-          stopEditing
-        )
-      )}
-    </TableBody>
-  </Table>
-);
+class MyTable extends React.Component {
+  buildTableRows() {
+    const {
+      data,
+      handleRemove,
+      startEditing,
+      editIdx,
+      stopEditing,
+      handleChange,
+      header
+    } = this.props;
+
+    let tableRows = [];
+    for (let i=0; i<data.length; i++) {
+      let tableRow = (
+        <MyTableRow
+          row={data[i]}
+          header={header}
+          handleChange={handleChange}
+          handleRemove={handleRemove}
+          startEditing={startEditing}
+          editIdx={editIdx}
+          stopEditing={stopEditing}
+          id={i}
+          key={i}
+        />
+      );
+      tableRows.push(tableRow);
+    }
+    return tableRows;
+  }
+
+  render() {
+    const {
+      header
+    } = this.props;
+
+    return (
+      <Table style={tbBody}>
+        <TableHead>
+          <TableRow>
+            {header.map((x, i) => (
+              <TableCell key={`thc-${i}`} style={{color: 'black', fontSize:'18', padding:'5'}}>{x.name}</TableCell>
+            ))}
+            <TableCell />
+            <TableCell />
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {this.buildTableRows()}
+        </TableBody>
+      </Table>
+    );
+  }
+}
+
+export default MyTable;

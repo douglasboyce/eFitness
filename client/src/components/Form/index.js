@@ -1,6 +1,6 @@
 import React from "react";
-import TextField from "material-ui/TextField";
-import RaisedButton from "material-ui/RaisedButton";
+import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
 const formInput = {
   width: '50%',
 }
@@ -43,40 +43,36 @@ class Form extends React.Component {
       <form  style={formInput}>
          <TextField
           name="dayOfTheWeek"
-          hintText="Enter day of the Week"
-          floatingLabelText="Day Of The Week"
+          helperText="Enter day of the Week"
+          label="Day Of The Week"
           value={this.state.dayOfTheWeek}
           onChange={e => this.change(e)}
-          floatingLabelFixed
 
         />
         <br />
         <TextField
           name="diastolic"
-          hintText="Enter your diastolic"
-          floatingLabelText="Diastolic"
+          helperText="Enter your diastolic"
+          label="Diastolic"
           value={this.state.diastolic}
           onChange={e => this.change(e)}
-          floatingLabelFixed
         />
         <br />
         <TextField
           name="systolic"
-          hintText="Enter your systolic"
-          floatingLabelText="Systolic"
+          helperText="Enter your systolic"
+          label="Systolic"
           value={this.state.systolic}
           onChange={e => this.change(e)}
-          floatingLabelFixed
         />
         <br />
         <TextField
           name="pulserate"
-          hintText="Enter your pulserate"
-          floatingLabelText="Pulserate"
+          helperText="Enter your pulserate"
+          label="Pulserate"
           value={this.state.pulserate}
           onChange={e => this.change(e)}
           type="pulserate"
-          floatingLabelFixed
         />
         <br />
         
@@ -84,15 +80,16 @@ class Form extends React.Component {
         <br />
         <TextField
           name="weight"
-          hintText="Enter your weight"
-          floatingLabelText="Weight"
+          helperText="Enter your weight"
+          label="Weight"
           value={this.state.weight}
           onChange={e => this.change(e)}
           type="weight"
-          floatingLabelFixed
         />
         <br />
-        <RaisedButton label="Submit" onClick={e => this.onSubmit(e)} primary />
+        <Button onClick={e => this.onSubmit(e)}>
+          Submit
+        </Button>
       </form>
       </div>
     );

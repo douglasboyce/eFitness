@@ -16,6 +16,8 @@
   "homepage": "https://github.com/douglasboyce/eFitness#readme",
   "proxy": "http://localhost:3001",
   "dependencies": {
+    "@material-ui/core": "^3.9.0",
+    "@material-ui/icons": "^3.0.2",
     "axios": "^0.18.0",
     "chart.js": "^2.7.3",
     "create-react-app": "^2.1.2",
