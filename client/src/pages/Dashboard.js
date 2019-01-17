@@ -115,7 +115,7 @@ render() {
     <div>
 
       <Container>
-        <br/><br/>
+        <br/><br/><br/>
         <Row>
           <Col size="md-12">
             <h1 className="text-center">myDashboard</h1>
