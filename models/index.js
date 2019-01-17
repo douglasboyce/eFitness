@@ -1,3 +1,4 @@
 module.exports = {
-  BPList: require("./BPList")
+  BPList: require("./BPList"),
+  ActivityList: require("./ActivityList")
 };

@@ -51,14 +51,6 @@ class Form extends React.Component {
         />
         <br />
         <TextField
-          name="diastolic"
-          helperText="Enter your diastolic"
-          label="Diastolic"
-          value={this.state.diastolic}
-          onChange={e => this.change(e)}
-        />
-        <br />
-        <TextField
           name="systolic"
           helperText="Enter your systolic"
           label="Systolic"
@@ -67,8 +59,16 @@ class Form extends React.Component {
         />
         <br />
         <TextField
+          name="diastolic"
+          helperText="Enter your diastolic"
+          label="Diastolic"
+          value={this.state.diastolic}
+          onChange={e => this.change(e)}
+        />
+        <br />
+        <TextField
           name="pulserate"
-          helperText="Enter your pulserate"
+          helperText="Enter your pulse rate"
           label="Pulserate"
           value={this.state.pulserate}
           onChange={e => this.change(e)}
