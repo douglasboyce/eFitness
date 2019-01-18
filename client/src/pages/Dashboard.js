@@ -150,11 +150,20 @@ class Dashboard extends Component {
     }));
   };
   onSubmit = submission => {
-    this.setState({
-      data: [...this.state.data, submission]
-    });
-    console.log(this.state);
-
+    this.setState(
+      {
+        data: [...this.state.data, submission]
+      },
+      () => {
+        console.log(this.state, "this the state");
+        axios
+          .put("/api/bplogchart/" + this.state.editIdx, this.state.data)
+          .then(res => {
+            console.log(res);
+          })
+          .catch(err => console.log(err));
+      }
+    );
     const id = this.state.id;
     console.log(id, "this update route");
     axios
@@ -290,80 +299,4 @@ class Dashboard extends Component {
     data[this.state.editIdx][label] = event.target.value;
     this.setState({ data });
   };
-
-//BPInput An BPTable//
-render() {
-  return (
-    <div>
-
-      <Container>
-        <br/><br/><br/>
-        <Row>
-          <Col size="md-12">
-            <h1 className="text-center">myDashboard</h1>
-          </Col>
-        </Row>
-        <Row>
-          <Col size="md-8">
-          <h3>Personal Information</h3>
-          <Form
-            onSubmit={submission =>
-              this.setState({
-                data: [...this.state.data, submission]
-              })}
-          />
-          <Table
-            handleRemove={this.handleRemove}
-            startEditing={this.startEditing}
-            editIdx={this.state.editIdx}
-            stopEditing={this.stopEditing}
-            handleChange={this.handleChange}
-            data={this.state.data}
-            header={[
-              {
-              name: "Day Of The Week",
-              prop: "dayOfTheWeek"
-              },
-              {
-                name: "Diastolic",
-                prop: "diastolic"
-              },
-              {
-                name: "Systolic",
-                prop: "systolic"
-              },
-              {
-                prop: "pulserate",
-                name: "Pulserate"
-              },
-              {
-                name: "Weight",
-                prop: "weight"
-              },
-            ]}
-          />
-          </Col>
-          <Col  size="md-4">
-          <h3>Exercise Log</h3>
-          </Col>
-            
-        </Row>
-        <Row>
-          <Col size="md-6">
-          <hr/>
-          <h3>BP Chart</h3>
-          <Chart chartData={this.state.chartData} week="1" legendPosition="bottom"/>
-          </Col>
-          <Col size="md-6">
-          <hr/>
-          <h3>BP Chart</h3>
-          <Chart chartData={this.state.chartData2} week="1" legendPosition="bottom"/>
-          </Col>
-        </Row>
-        </Container>
-      </div>
-    );
-  }
-}
-
 export default Dashboard;
