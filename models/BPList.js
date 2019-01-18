@@ -1,19 +1,23 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const BloodPressureList = new Schema({
+let BPListSchema = new Schema({
+  dayOfTheWeek: {
+    type: String
+    //required: true
+  },
   diastolic: { 
-    type: Number, 
-    required: true 
+    type: Number 
+    //required: true 
   },
   systolic: {
-     type:Number , 
-     required: true
+     type:Number  
+     //required: true
      },
      pulserate: Number,
      weight: {
-      type: Number, 
-      required: true
+      type: Number 
+      //required: true
      },
   date: { 
     type: Date,
@@ -21,6 +25,6 @@ const BloodPressureList = new Schema({
     }
 });
 
-const BPList = mongoose.model("BPList", BloodPressureList);
+const BPList = mongoose.model("BPList", BPListSchema);
 
-module.exports = BloodPressureList;
+module.exports = BPList;
