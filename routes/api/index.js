@@ -1,31 +1,7 @@
 const router = require("express").Router();
-const BPController = require("../../controllers/BPController");
+const BPChartRoutes = require("./BPLogChart");
 
-// Matches with "/api/books"
-router.route("/")
-  .get(
-    function (req, res) {
-      console.log("route been hit");
-      res.send('HELLO ROUTE');
-    }
-  )
-  .post(BPController.create);
-
-// Matches with "/api/books/:id"
-router
-  .route("/bplogchart/:id")
-  .get(BPController.findById)
-  .put( function (req, res) {
-    const id = req.params.id;
-    console.log(id);
-    console.log("route been hit");
-    res.send('update route has been hit');
-  })
-  .delete( function (req, res) {
-    const id = req.params.id;
-    console.log(id);
-    console.log("route been hit");
-    res.send('delete route has been hit');
-  });
+// Book routes
+router.use("/BPLogChart", BPChartRoutes);
 
 module.exports = router;
