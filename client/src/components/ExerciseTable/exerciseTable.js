@@ -6,9 +6,14 @@ import {
   TableRow,
   TableCell
 } from "@material-ui/core";
-import MyTableRow from './row.js';
+import MyTRow from '../Table/row.js';
 
-class MyTable extends React.Component {
+const tbBody = {
+  backgroundColor: '#588FDB',
+  marginTop: '20'
+}
+
+class ExerciseTable extends React.Component {
   buildTableRows() {
     const {
       data,
@@ -23,7 +28,7 @@ class MyTable extends React.Component {
     let tableRows = [];
     for (let i=0; i<data.length; i++) {
       let tableRow = (
-        <MyTableRow
+        <MyTRow
           row={data[i]}
           header={header}
           handleChange={handleChange}
@@ -46,9 +51,9 @@ class MyTable extends React.Component {
     } = this.props;
 
     return (
-      <Table className="table">
+      <Table style={tbBody}>
         <TableHead>
-          <TableRow className="table-row">
+          <TableRow>
             {header.map((x, i) => (
               <TableCell key={`thc-${i}`} style={{color: 'black', fontSize:'18', padding:'5'}}>{x.name}</TableCell>
             ))}
@@ -64,4 +69,4 @@ class MyTable extends React.Component {
   }
 }
 
-export default MyTable;
+export default ExerciseTable;

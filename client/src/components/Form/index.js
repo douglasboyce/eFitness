@@ -1,9 +1,7 @@
 import React from "react";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-const formInput = {
-  width: '50%',
-}
+
 class Form extends React.Component {
   constructor() {
     super();
@@ -40,7 +38,7 @@ class Form extends React.Component {
   render() {
     return (
       <div>
-      <form  style={formInput}>
+      <form style={{backgroundColor: '#C0C0C0'}}>
          <TextField
           name="dayOfTheWeek"
           helperText="Enter day of the Week"
@@ -87,7 +85,7 @@ class Form extends React.Component {
           type="weight"
         />
         <br />
-        <Button onClick={e => this.onSubmit(e)}>
+        <Button className="button" onClick={e => this.onSubmit(e)}>
           Submit
         </Button>
       </form>
