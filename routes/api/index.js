@@ -9,15 +9,29 @@ router.route("/")
       res.send('HELLO ROUTE');
     }
   )
-  .post(BPController.create);
+  
 
 // Matches with "/api/books/:id"
 router
   .route("/bplogchart/:id")
-  .get(BPController.findById)
-  .put( function (req, res) {
+  .get( function (req, res) {
     const id = req.params.id;
+     console.log(id);
+     console.log(req.body);
+     console.log("route been hit");
+     res.send('get route has been hit');
+   })
+  .post( function (req, res) {
+    const id = req.params.id;
+     console.log(id);
+     console.log(req.body);
+     console.log("route been hit");
+     res.send('post route has been hit');
+   })
+  .put( function (req, res) {
+   const id = req.params.id;
     console.log(id);
+    console.log(req.body);
     console.log("route been hit");
     res.send('update route has been hit');
   })

@@ -96,20 +96,22 @@ class Dashboard extends Component {
     }));
   };
   onSubmit = submission => {
-    this.setState({
-      data: [...this.state.data, submission]
-    });
-    console.log(this.state);
-
+    this.setState(
+      {
+        data: [...this.state.data, submission]
+      },
+      () => {
+        console.log(this.state, "this the state");
+        axios
+          .put("/api/bplogchart/" + this.state.editIdx, this.state.data)
+          .then(res => {
+            console.log(res);
+          })
+          .catch(err => console.log(err));
+      }
+    );
     const id = this.state.id;
     console.log(id, "this update route");
-    axios
-      .put("/api/bplogchart/" + id)
-      .then(res => {
-        console.log(res);
-      })
-      .catch(err => console.log(err));
-
     //});
   };
   startEditing = id => {
