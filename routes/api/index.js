@@ -6,7 +6,7 @@ router
   .route("/")
   .get(
     function (req, res) {
-      console.log("route been hit");
+      console.log("api route been hit");
       res.send('HELLO ROUTE');
     }
   )
@@ -14,14 +14,14 @@ router
 
   router
   .route("/bplogchart/")
-  .get(
-    function(res, req) {
-      const data = req.data;
-      console.log("route has been hit");
-      res.send("get route has been hit");
-    }
-  )
-  .post(BPController.create)
+  .get(BPController.findAll)
+  //   function(res, req) {
+  //     const data = res.data;
+  //     console.log("bplogchart route has been hit");
+  //     console.log(data);
+  //   }
+  // )
+  .post(BPController.create);
 
 // Matches with "/api/books/:id"
 router

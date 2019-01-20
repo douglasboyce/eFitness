@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const BloodPressureList = new Schema({
+const BPSchema = new Schema({
   systolic: { 
     type: Number, 
     required: true 
@@ -20,6 +20,6 @@ const BloodPressureList = new Schema({
     }
 });
 
-const BPList = mongoose.model("BPList", BloodPressureList);
+const BPList = mongoose.model("BPList", BPSchema);
 
-module.exports = BloodPressureList;
+module.exports = BPList;

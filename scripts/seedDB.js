@@ -10,25 +10,32 @@ mongoose.connect(
 
 const bpSeed = [
   {
+    date: new Date(Date.now()),
     systolic: 120,
-    siastolic: 78,
+    diastolic: 78,
     pulserate: 80,
     weight: 142,
-    date: new Date(Date.now())
   },
   {
+    date: new Date(Date.now()),
     systolic: 117,
-    siastolic: 80,
+    diastolic: 80,
     pulserate: 72,
     weight: 138,
-    date: new Date(Date.now())
   },
   {
+    date: new Date(Date.now()),
     systolic: 122,
-    siastolic: 76,
+    diastolic: 76,
     pulserate: 78,
     weight: 140,
-    date: new Date(Date.now())
+  },
+  {
+    date: new Date(Date.now()),
+    systolic: 130,
+    diastolic: 78,
+    pulserate: 80,
+    weight: 144,
   }
 ];
 

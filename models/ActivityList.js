@@ -19,6 +19,6 @@ const ActivityList = new Schema({
     }
 });
 
-const ActList = mongoose.model("BPList", ActivityList);
+// const ActList = mongoose.model("BPList", ActivityList);
 
 module.exports = ActivityList;
