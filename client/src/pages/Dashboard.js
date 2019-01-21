@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import Container from "../components/Container";
 import Row from "../components/Row";
 import Col from "../components/Col";
@@ -12,6 +12,7 @@ class Dashboard extends Component {
   constructor() {
     super();
     this.state = {
+      BPdata,
       data: [],
       editIdx: -1
     };
@@ -32,6 +33,13 @@ class Dashboard extends Component {
         console.log(data);
       })
     .catch(err => console.log(err));
+
+    // API.getBPData()
+    //   .then(res => this.setState({ BPData: res.data }))
+    //   .catch(err => console.log(err));
+    const systolic = BPdata;
+    console.log(systolic);
+
 
     this.setState({
       chartData: {
@@ -55,10 +63,14 @@ class Dashboard extends Component {
               "rgba(153, 102, 255, 0.6)",
               "rgba(255, 159, 64, 0.6)",
               "rgba(255, 99, 132, 0.6)"
+
             ]
           }]
         }
       });
+
+
+    console.log(BPdata);
 
       /* chart 2 */
     this.setState({
@@ -118,11 +130,36 @@ class Dashboard extends Component {
     });
   }
 
+
   handleChange = (event, label) => {
     let data = this.state.data;
     data[this.state.editIdx][label] = event.target.value;
     this.setState({ data });
   };
+
+
+  //BPInput An BPTable//
+  //componentDidMount() {
+  // this.handleChange();
+  //}
+  handleChange = (event, label) => {
+    /*API.getBPLogChart()
+      .then(res =>
+        this.setState({
+          BPList: res.data,
+          diastolic: "",
+          systolic: "",
+          pulserate: "",
+          weight: "",
+          dayOfTheWeek: ""
+        })
+      )
+      .catch(err => console.log(err)); */
+    let data = this.state.data;
+    data[this.state.editIdx][label] = event.target.value;
+    this.setState({ data });
+  };
+
 
   handleRemove = id => {
     console.log(id, "this is id");
@@ -280,11 +317,20 @@ class Dashboard extends Component {
                 />
               </Col>
             </Row>
+
             </div>
           </Container>
         </div>
        );
       };
     };
+
+
+          </div>
+  handleChange = (event, label) => {
+    let data = this.state.data;
+    data[this.state.editIdx][label] = event.target.value;
+    this.setState({ data });
+  };
 
 export default Dashboard;

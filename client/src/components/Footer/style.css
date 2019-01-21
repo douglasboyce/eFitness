@@ -1,6 +1,16 @@
+  * {
+    box-sizing: border-box;
+  }
+body {
+  background-image: url("https://images.pexels.com/photos/313563/sand-pattern-wave-texture-313563.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+  background-color: #cccccc; /* Used if the image is unavailable */
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  
+}
 .footer {
   min-height: 100px;
-  background: #E5E5E5;
   position: relative;
 }
 
@@ -13,4 +23,90 @@
   background: #B8B8B8;
   text-align: center;
   position: fixed;
+}
+
+.container{
+  margin-top: 80px;
+}
+
+/* BPlist table and form*/
+.table-and-form {
+  text-align: center;
+}
+/*BPlist  form*/
+.form{
+  background: #07F7A7;
+  border-radius: 2px;
+  width: 100%;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  float: left;
+  padding-left: 10%;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  position: relative;
+}
+/*BPlist table*/
+.table1{
+  border-radius: 2px;
+  width: 100%;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  
+}
+.table{
+  border-radius: 2px;
+  width: 100%;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  background-color: rgb(143, 139, 139);
+  
+}
+/*BPlist  form2*/
+.form2{
+  background: rgb(114, 197, 236);
+  border-radius: 2px;
+  width: 100%;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  padding-left: 10%;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  float: left;
+  
+}
+/* BPlist table and form2*/
+.table-and-form2 {
+  text-align: center;
+}
+.h2 {
+  font-size: 28px;
+  color: rgb(21, 121, 235);
+}
+/*chart log*/
+.chart-div {
+  background-color: #B8B8B8;
+  border-radius: 2px;
+  width: 100%;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: rgb(30, 75, 223) !important;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: red !important}
+
+.button:active {
+  background-color: #3e8e41 !important;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }

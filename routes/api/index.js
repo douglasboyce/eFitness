@@ -15,12 +15,7 @@ router
   router
   .route("/bplogchart/")
   .get(BPController.findAll)
-  //   function(res, req) {
-  //     const data = res.data;
-  //     console.log("bplogchart route has been hit");
-  //     console.log(data);
-  //   }
-  // )
+
   .post(BPController.create);
 
 // Matches with "/api/books/:id"
