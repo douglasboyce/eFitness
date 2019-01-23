@@ -25,14 +25,14 @@ function Navbar() {
           </li>
           <li className="nav-item">
             <Link
-              to="/dashboard"
+              to="/bplog"
               className={
-                window.location.pathname === "/" || window.location.pathname === "/dashboard"
+                window.location.pathname === "/" || window.location.pathname === "/bplog"
                   ? "nav-link active"
                   : "nav-link"
               }
             >
-              <h3>myDashboard</h3>
+              <h3>Blood Pressure Log</h3>
             </Link>
           </li>
           {/**g added below this line */}
@@ -41,7 +41,7 @@ function Navbar() {
               to="/sign in"
               className={
                 window.location.pathname === "/" || window.location.pathname === "/dashboard"
-                  ? "nav-link active"
+                  ? "nav-link disable"
                   : "nav-link"
               }
             >
@@ -53,14 +53,25 @@ function Navbar() {
               to="/sign up"
               className={
                 window.location.pathname === "/" || window.location.pathname === "/dashboard"
-                  ? "nav-link active"
+                  ? "nav-link disabled"
                   : "nav-link"
               }
             >
               <h3>Sign Up</h3>
             </Link>
           </li>
-          {/**g added line above this line */}
+          <li className="nav-item">
+            <Link
+              to="/exerciselog"
+              className={
+                window.location.pathname === "/" || window.location.pathname === "/exerciselog"
+                  ? "nav-link active"
+                  : "nav-link"
+              }
+            >
+              <h3>Activity Log</h3>
+            </Link>
+          </li>
     </ul>
       </div>
     </nav>

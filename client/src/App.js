@@ -1,7 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route,Switch } from "react-router-dom";
 import About from "./pages/About";
-import Dashboard from "./pages/Dashboard";
+import BPLog from "./pages/BPLog";
+import ExerciseLog from "./pages/ExerciseLog";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
@@ -19,7 +20,8 @@ function App() {
         <Switch>
           <Route exact path="/" component={About} />
           <Route exact path="/about" component={About} />
-          <Route exact path="/dashboard" component={Dashboard} />
+          <Route exact path="/bplog" component={BPLog} />
+          <Route exact path="/ExerciseLog" component={ExerciseLog} />
           <Route exact path="./singUpForm" component={SignUpForm} />
           <Route exact path="./singInForm" component={SignInForm} />
           </Switch>

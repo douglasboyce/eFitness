@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Bar} from 'react-chartjs-2';
 
-class BPchart extends Component{
+class BPChart extends Component{
   constructor(props){
     super(props);
     this.state = {
@@ -13,8 +13,7 @@ class BPchart extends Component{
   static defaultProps = {
     displayTitle:true,
     displayLegend: true,
-    legendPosition:'right',
-    location:'City'
+    legendPosition:'right'
   }
 
   render(){
@@ -39,4 +38,4 @@ class BPchart extends Component{
   }
 }
 
-export default BPchart;
+export default BPChart;

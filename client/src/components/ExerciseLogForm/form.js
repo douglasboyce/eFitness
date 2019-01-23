@@ -52,7 +52,7 @@ class MyForm extends React.Component {
         <br />
         <TextField
           name="day"
-          helperText="Enter todays day"
+          helperText="Enter the day of the week"
           label="Day"
           value={this.state.day}
           onChange={e => this.change(e)}

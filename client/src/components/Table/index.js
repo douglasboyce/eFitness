@@ -50,7 +50,7 @@ class MyTable extends React.Component {
         <TableHead>
           <TableRow className="table-row">
             {header.map((x, i) => (
-              <TableCell key={`thc-${i}`} style={{color: 'black', fontSize:'18', padding:'5'}}>{x.name}</TableCell>
+              <TableCell key={`thc-${i}`} style={{color: 'white', fontSize:'18', padding:'5'}}>{x.name}</TableCell>
             ))}
             <TableCell />
             <TableCell />

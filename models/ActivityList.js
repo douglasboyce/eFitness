@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const ActivityList = new Schema({
+const Activityschema = new Schema({
   exerciseName: { 
     type: String, 
     required: true 
@@ -19,6 +19,6 @@ const ActivityList = new Schema({
     }
 });
 
-const ActList = mongoose.model("BPList", ActivityList);
+const ActivityList = mongoose.model("ActivityList", Activityschema);
 
 module.exports = ActivityList;
