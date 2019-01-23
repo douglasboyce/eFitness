@@ -16,15 +16,6 @@ class ExerciseLog extends Component {
    // this.handleRemove = this.handleRemove.bind(this);
  }
 
- //BPInput An BPTable//
- componentDidMount() {
- axios
- .get("/api/activitylog/")
- .then(res => this.setState({data: res}))
- .catch(err => console.log(err));
-console.log(this.state.data)
- }
-
  handleChange = (event, label) => {
    let data = this.state.data;
    data[this.state.editIdx][label] = event.target.value;
@@ -34,7 +25,7 @@ console.log(this.state.data)
  handleRemove = id => {
    console.log(id, "this is id");
    axios
-     .delete("/api/bplogchart/" + id)
+     .delete("/api/activitylog/" + id)
      .then(res => {
        console.log(res);
      })
@@ -82,7 +73,6 @@ console.log(this.state.data)
              <Col size="md-12">
                <Form onSubmit={this.onSubmit} />
            <h2 className="h2">Exercise Log Table</h2>
-           
                <Table
                  handleRemove={this.handleRemove}
                  startEditing={this.startEditing}

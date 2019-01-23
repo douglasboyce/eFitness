@@ -22,11 +22,11 @@ function App() {
           <Route exact path="/about" component={About} />
           <Route exact path="/bplog" component={BPLog} />
           <Route exact path="/ExerciseLog" component={ExerciseLog} />
-          <Route exact path="./singUpForm" component={SignUpForm} />
-          <Route exact path="./singInForm" component={SignInForm} />
+          {/* <Route exact path="./singUpForm" component={SignUpForm} />
+          <Route exact path="./singInForm" component={SignInForm} /> */}
           </Switch>
         </Wrapper>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </Router>
   );

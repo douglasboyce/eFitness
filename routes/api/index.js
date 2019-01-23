@@ -21,20 +21,20 @@ const ActivityController = require("../../controllers/ActivityController");
 
 // Matches with "/api/bplogchart/:id"
   router
-  .route("/api/bplogchart/:id")
+  .route("/bplogchart/:id")
   .get(BPController.findById)
   .put( BPController.update) 
   .delete(BPController.remove);
 
     // Matches with "/api/activitylog"
     router
-    .route("/api/activitylog/")
+    .route("/activitylog/")
     .get(ActivityController.findAll)
     .post(ActivityController.create);
   
   // Matches with "/api/activity/:id"
     router
-    .route("/api/activitylog/:id")
+    .route("/activitylog/:id")
     .get(ActivityController.findById)
     .put( function (req, res) {
       const id = req.params.id;
