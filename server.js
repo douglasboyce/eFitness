@@ -31,7 +31,7 @@ db.BPList.create({ systolic: 120, diastolic: 78, pulserate: 80, weight: 132 })
 
 
 // Route for getting all BPLists from the db
-app.get("/bplogchart/all", function(req, res) {
+app.get("bplogchart/all", function(req, res) {
   // Grab every document in the BPList collection
   console.log("I have arrived");
   db.BPList.find({})
@@ -46,7 +46,7 @@ app.get("/bplogchart/all", function(req, res) {
 });
 
 // Route for saving/updating an Article's associated Note
-app.post("/bplogchart/:id", function(req, res) {
+app.post("bplogchart/:id", function(req, res) {
   // Create a new note and pass the req.body to the entry
   db.BPList.create(req.body)
     .then(function(dbBPList) {

@@ -18,10 +18,10 @@ class ExerciseLog extends Component {
 
  ComponentWillMount() {
    axios
-   .get("/activityList")
+   .get("/activityList/all")
    .then(res => {
      console.log(res)
-   })
+   });
  }
 
  handleChange = (event, label) => {

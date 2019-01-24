@@ -4,6 +4,7 @@ import Row from "../components/Row";
 import Col from "../components/Col";
 import Form from "../components/BPLogForm";
 import Table from "../components/BPTable";
+import Chart from "../components/BPChart";
 import axios from "axios";
 
 class BPLog extends Component {
@@ -21,7 +22,72 @@ class BPLog extends Component {
  }
 
  handleGetResults() {
-   alert("I am here");
+    axios
+    .get("/activityList/all")
+    .then(res => {
+      console.log(res)
+      return res;
+    })
+    .catch(err => console.log(err));
+    this.handleSetChartData();
+ }
+
+ handleSetChartData() {
+    console.log("set chart data");
+    this.setState({
+      chartData:{
+        labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fr', 'Sat'],
+        datasets:[
+          {
+            label:'Systolic Rate for the week',
+            data:[
+              120,
+              128,
+              122,
+              118,
+              124,
+              128,
+              132
+            ],
+            backgroundColor:[
+              'rgba(255, 99, 132, 0.6)',
+              'rgba(54, 162, 235, 0.6)',
+              'rgba(255, 206, 86, 0.6)',
+              'rgba(75, 192, 192, 0.6)',
+              'rgba(153, 102, 255, 0.6)',
+              'rgba(255, 159, 64, 0.6)',
+              'rgba(255, 99, 132, 0.6)'
+            ]
+          }
+        ]
+      },
+      chartData2:{
+        labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fr', 'Sat'],
+        datasets:[
+          {
+            label:'Diastolic Rate for the week',
+            data:[
+              120,
+              128,
+              122,
+              118,
+              124,
+              128,
+              132
+            ],
+            backgroundColor:[
+              'rgba(255, 99, 132, 0.6)',
+              'rgba(54, 162, 235, 0.6)',
+              'rgba(255, 206, 86, 0.6)',
+              'rgba(75, 192, 192, 0.6)',
+              'rgba(153, 102, 255, 0.6)',
+              'rgba(255, 159, 64, 0.6)',
+              'rgba(255, 99, 132, 0.6)'
+            ]
+          }
+        ]
+      }
+  })
  }
 
  handleChange = (event, label) => {
@@ -81,7 +147,11 @@ class BPLog extends Component {
              <Col size="md-12">
                <Form onSubmit={this.onSubmit} />
                <br/><br/>
-           <h2 className="h2">Blood Pressure Log Table</h2>
+                   <h2 className="h2">Blood Pressure Log Table</h2>
+              </Col>
+            </Row>
+            <Row>
+              <Col size="md-12">
                <Table
                  handleRemove={this.handleRemove}
                  startEditing={this.startEditing}
@@ -114,6 +184,14 @@ class BPLog extends Component {
                />
              </Col>
            </Row>
+           <Row>
+             <Col size="md-6">
+                <Chart chartData={this.state.chartData} week="1" legendPosition="bottom"/>
+             </Col>
+             <Col size="md-6">
+                <Chart chartData={this.state.chartData2} week="1" legendPosition="bottom"/>
+             </Col>
+            </Row>
        </Container>
      </div>
      </section>
