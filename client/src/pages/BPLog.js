@@ -16,6 +16,14 @@ class BPLog extends Component {
    // this.handleRemove = this.handleRemove.bind(this);
  }
 
+ componentWillMount() {
+   this.handleGetResults();
+ }
+
+ handleGetResults() {
+   alert("I am here");
+ }
+
  handleChange = (event, label) => {
    let data = this.state.data;
    data[this.state.editIdx][label] = event.target.value;

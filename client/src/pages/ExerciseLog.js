@@ -16,6 +16,14 @@ class ExerciseLog extends Component {
    // this.handleRemove = this.handleRemove.bind(this);
  }
 
+ ComponentWillMount() {
+   axios
+   .get("/activityList")
+   .then(res => {
+     console.log(res)
+   })
+ }
+
  handleChange = (event, label) => {
    let data = this.state.data;
    data[this.state.editIdx][label] = event.target.value;
