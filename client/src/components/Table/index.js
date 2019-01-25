@@ -31,7 +31,7 @@ class MyTable extends React.Component {
           startEditing={startEditing}
           editIdx={editIdx}
           stopEditing={stopEditing}
-          id={i}
+          id={data[i]._id}
           key={i}
         />
       );
@@ -46,9 +46,9 @@ class MyTable extends React.Component {
     } = this.props;
 
     return (
-      <Table className="table">
-        <TableHead>
-          <TableRow className="table-row">
+      <Table className="tbody">
+      <TableHead className="table-head">
+          <TableRow>
             {header.map((x, i) => (
               <TableCell key={`thc-${i}`} style={{color: 'black', fontSize:'18', padding:'5'}}>{x.name}</TableCell>
             ))}

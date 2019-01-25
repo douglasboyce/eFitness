@@ -4,7 +4,7 @@ import "./style.css";
 function Footer() {
   return (
     <footer className="footer">
-      <span>Created by Douglas Boyce and Gezahegn Worku 2019</span>
+      <span>Created by Douglas, Gezahegn, Grant and Thomas. @ KU Bootcamp 2019.</span>
     </footer>
   );
 }

@@ -1,4 +1,4 @@
-.App {
+/*.App {
   height: 100vh;
   display: flex;
   color: white;
@@ -8,7 +8,7 @@
   width: 50%;
   background-color: #66DAC7;
 }
-
+/*
 .App__Form {
   width: 50%;
   background-color: #2E4158;
@@ -140,3 +140,4 @@
   padding-bottom: 2px;
   margin-left: 5px;
 }
+*/

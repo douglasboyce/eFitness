@@ -8,11 +8,6 @@ import {
 } from "@material-ui/core";
 import MyTRow from '../Table/row.js';
 
-const tbBody = {
-  backgroundColor: '#588FDB',
-  marginTop: '20'
-}
-
 class ExerciseTable extends React.Component {
   buildTableRows() {
     const {
@@ -51,13 +46,13 @@ class ExerciseTable extends React.Component {
     } = this.props;
 
     return (
-      <Table style={tbBody}>
-        <TableHead>
+      <Table className="tbody">
+        <TableHead className="table-head">
           <TableRow>
             {header.map((x, i) => (
               <TableCell key={`thc-${i}`} style={{color: 'black', fontSize:'18', padding:'5'}}>{x.name}</TableCell>
             ))}
-            <TableCell />
+             <TableCell />
             <TableCell />
           </TableRow>
         </TableHead>
