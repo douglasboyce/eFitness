@@ -10,15 +10,21 @@ const BPListSchema = new Schema({
     //required: true 
   },
   systolic: {
-     type:Number  
+     type:Number 
      //required: true
      },
      pulserate:{
      type: Number
+     //required: true
     },
      weight: {
-      type: Number 
-     }
+      type: Number
+      //required: true
+     },
+     date: { 
+      type: Date,
+       default: Date.now 
+      }
       //required: true
 /*const BloodPressureList = new Schema({
   systolic: { 

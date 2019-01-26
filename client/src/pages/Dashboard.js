@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Container from "../components/Container";
 import Row from "../components/Row";
 import Col from "../components/Col";
-import Chart from "../components/BPChart";
+//import Chart from "../components/BPChart";
 //import BPdata from "../data.json";
 import Form from "../components/Form";
 import Table from "../components/Table";
@@ -14,7 +14,7 @@ class Dashboard extends Component {
     this.state = {
       BPdata: {
         dayOfTheWeek: "",
-        time: "",
+        date: "",
         diastolic: "",
         systolic: "",
         pulserate: "",
@@ -159,17 +159,18 @@ class Dashboard extends Component {
                       prop: "dayOfTheWeek"
                     },
                     {
-                      name: "Time",
-                      prop: "time"
-                    },
-                    {
-                      name: "Diastolic",
-                      prop: "diastolic"
+                      name: "Date",
+                      prop: "date"
                     },
                     {
                       name: "Systolic",
                       prop: "systolic"
                     },
+                    {
+                      name: "Diastolic",
+                      prop: "diastolic"
+                    },
+                   
                     {
                       prop: "pulserate",
                       name: "Pulserate"

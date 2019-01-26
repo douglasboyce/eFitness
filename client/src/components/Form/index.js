@@ -7,7 +7,6 @@ class Form extends React.Component {
     super();
     this.state = {
       dayOfTheWeek: "",         
-      time: "",
       systolic: "",
       diastolic: "",
       pulserate: "",
@@ -47,12 +46,6 @@ class Form extends React.Component {
             value={this.state.dayOfTheWeek}
             onChange={e => this.change(e)}
           />
-           <TextField
-            name="time"
-            label="Enter time"
-            value={this.state.time}
-            onChange={e => this.change(e)}
-          />
           <TextField
             name="systolic"
             label="Systolic"
@@ -70,14 +63,12 @@ class Form extends React.Component {
             label="Pulserate"
             value={this.state.pulserate}
             onChange={e => this.change(e)}
-            type="pulserate"
           />
           <TextField
             name="weight"
             label="Weight"
             value={this.state.weight}
             onChange={e => this.change(e)}
-            type="weight"
           />
           <Button className="button" onClick={e => this.onSubmit(e)}>
             Submit
