@@ -5,6 +5,9 @@ const BPListSchema = new Schema({
     type: String
     //required: true
   },
+  time: {
+    type: String
+  },
   diastolic: { 
     type: Number 
     //required: true 

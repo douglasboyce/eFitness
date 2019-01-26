@@ -6,11 +6,11 @@ class MyForm extends React.Component {
   constructor() {
     super();
     this.state = {
-      day: "",
-      typeOfExercise: "",
+      exerciseDay: "",
+      exerciseName: "",      
       duration: "",
-      reps: "",
-      sets: ""
+      numberOfSets: "",
+      numberOfReps: ""
     };
   }
 
@@ -27,11 +27,11 @@ class MyForm extends React.Component {
     this.props.onSubmit(this.state);
     // clear form
     this.setState({
-      day: "",
-      typeOfExercise: "",
+      exerciseDay: "",
+      exerciseName: "",      
       duration: "",
-      reps: "",
-      sets: ""
+      numberOfSets: "",
+      numberOfReps: ""
     });
   };
 
@@ -40,15 +40,15 @@ class MyForm extends React.Component {
       <div>
         <form>
           <TextField
-            name="day"
-            label="Enter todays day"
-            value={this.state.day}
+            name="exerciseDay"
+            label="Enter exercise Day"
+            value={this.state.exerciseDay}
             onChange={e => this.change(e)}
           />
           <TextField
-            name="typeOfExercise"
-            label="Enter  type Of Exercise"
-            value={this.state.typeOfExercise}
+            name="exerciseName"
+            label="Enter exerciseName"
+            value={this.state.exerciseName}
             onChange={e => this.change(e)}
           />
           <TextField
@@ -56,20 +56,18 @@ class MyForm extends React.Component {
             label="Enter the duration"
             value={this.state.duration}
             onChange={e => this.change(e)}
-            type="duration"
           />
           <TextField
-            name="sets"
+            name="numberOfSets"
             label=" Enter Sets"
-            value={this.state.sets}
+            value={this.state.numberOfSets}
             onChange={e => this.change(e)}
           />
           <TextField
-            name="reps"
+            name="numberOfReps"
             label=" Enter Reps"
-            value={this.state.reps}
+            value={this.state.numberOfReps}
             onChange={e => this.change(e)}
-            type="reps"
           />
           <Button className="button" onClick={e => this.onSubmit(e)}>
             Submit

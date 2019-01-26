@@ -18,67 +18,80 @@ class ExerciseLog extends Component {
     // this.handleRemove = this.handleRemove.bind(this);
   }
 
-  //BPInput An BPTable//
-  //componentDidMount() {
-  // this.handleChange();
-  //}
-  handleChange = (event, label) => {
-    /*API.getBPLogChart()
-      .then(res =>
-        this.setState({
-          BPList: res.data,
-          diastolic: "",
-          systolic: "",
-          pulserate: "",
-          weight: "",
-          dayOfTheWeek: ""
-        })
-      )
-      .catch(err => console.log(err)); */
-    let data = this.state.data;
-    data[this.state.editIdx][label] = event.target.value;
-    this.setState({ data });
-  };
-
-  handleRemove = id => {
-    console.log(id, "this is id");
+  componentDidMount() {
+   this.getExerciseData();
+  }
+getExerciseData() {
     axios
-      .delete("/api/bplogchart/" + id)
+      .get("/api/exerciselog/all")
       .then(res => {
-        console.log(res);
+        this.setState({
+          data: res.data
+        });
+        //console.log(BPdata);
+        //console.log(BPdata[2]);
       })
       .catch(err => console.log(err));
-    this.setState(state => ({
-      data: state.data.filter((row, j) => j !== id)
-    }));
-  };
-  onSubmit = submission => {
-    this.setState(
-      {
-        data: [...this.state.data, submission]
-      },
-      () => {
-        console.log(this.state, "this the state");
+    }
+      handleChange = (event, label) => {
+        let data = this.state.data;
+        let index = data.findIndex(element => {
+          return element._id === this.state.editIdx;
+        });
+        //console.log(index, "update index");
+        data[index][label] = event.target.value;
+        //data[this.state.editIdx][label] = event.target.value;
+        this.setState({ data });
+        console.log(this.state.editIdx, "edit index");
         axios
-          .put("/api/bplogchart/" + this.state.editIdx, this.state.data)
+          .put("/api/exerciselog/" + this.state.editIdx, {
+            data
+          })
           .then(res => {
             console.log(res);
           })
           .catch(err => console.log(err));
-      }
-    );
-    const id = this.state.id;
-    console.log(id, "this update route");
-    //});
-  };
-  startEditing = id => {
-    this.setState({ editIdx: id });
-  };
-
-  stopEditing = () => {
-    this.setState({ editIdx: -1 });
-  };
-
+      };
+    
+      handleRemove = id => {
+        console.log(id, "this is id");
+        axios
+          .delete("/api/exerciselog/" + id)
+          .then(res => {
+            console.log(res);
+          })
+          .catch(err => console.log(err));
+        this.setState(state => ({
+          data: state.data.filter(row => row._id !== id)
+        }));
+      };
+      onSubmit = submission => {
+        this.setState(
+          {
+            data: [...this.state.data, submission]
+          },
+          () => {
+            console.log(this.state, "this the state");
+            axios
+              .post("/api/exerciselog/" + this.state.editIdx, this.state.data)
+              .then(res => {
+                console.log(res);
+              })
+              .catch(err => console.log(err));
+          }
+        );
+        const id = this.state.id;
+        console.log(id, "this update route");
+        //});
+      };
+      startEditing = id => {
+        this.setState({ editIdx: id });
+      };
+    
+      stopEditing = () => {
+        this.setState({ editIdx: -1 });
+      };
+    
   //BPInput An BPTable//
   render() {
     return (
@@ -100,25 +113,26 @@ class ExerciseLog extends Component {
                   data={this.state.data}
                   header={[
                     {
-                      name: "Day",
-                      prop: "day"
+                      name: "Exercise Day",
+                      prop: "exerciseDay"
                     },
                     {
-                      name: "Type Of Exercise",
-                      prop: "typeOfExercise"
+                      name: "Exercise Name",
+                      prop: "exerciseName"
                     },
                     {
                       name: "Duration",
                       prop: "duration"
+                    }, 
+                    {
+                      name: "Number Of Sets",
+                      prop: "numberOfSets"
                     },
                     {
-                      prop: "reps",
-                      name: "Reps"
-                    },
-                    {
-                      name: "Sets",
-                      prop: "sets"
+                      name: "Number Of Reps",
+                      prop: "numberOfReps"
                     }
+                   
                   ]}
                 />
               </Col>

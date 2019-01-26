@@ -1,4 +1,4 @@
 module.exports = {
   BPList: require("./BPList"),
-  //ActivityList: require("./ActivityList")
+  ExerciseList: require("./ExerciseList")
 };

@@ -1,7 +1,11 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const Activityschema = new Schema({
+const ExerciseSchema = new Schema({
+  exerciseDay: { 
+    type: String, 
+    required: true 
+  },
   exerciseName: { 
     type: String, 
     required: true 
@@ -11,7 +15,7 @@ const Activityschema = new Schema({
      },
   numberOfReps: Number,
   duration: {
-      type: Number, 
+      type: String, 
      },
   date: { 
     type: Date,
@@ -19,6 +23,6 @@ const Activityschema = new Schema({
     }
 });
 
-const ActivityList = mongoose.model("ActivityList", Activityschema);
+const ExerciseList = mongoose.model("ExerciseList", ExerciseSchema);
 
-module.exports = ActivityList;
+module.exports = ExerciseList;

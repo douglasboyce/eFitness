@@ -31,7 +31,7 @@ class ExerciseTable extends React.Component {
           startEditing={startEditing}
           editIdx={editIdx}
           stopEditing={stopEditing}
-          id={i}
+          id={data[i]._id}
           key={i}
         />
       );
