@@ -1,6 +1,21 @@
+  * {
+    box-sizing: border-box;
+  }
+body {
+  
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d8e0de+0,aebfbc+22,99afab+33,8ea6a2+50,829d98+67,4e5c5a+82,0e0e0e+100;Grey+3D */
+background: rgb(216,224,222); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(216,224,222,1) 0%, rgba(174,191,188,1) 22%, rgba(153,175,171,1) 33%, rgba(142,166,162,1) 50%, rgba(130,157,152,1) 67%, rgba(78,92,90,1) 82%, rgba(14,14,14,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(216,224,222,1) 0%,rgba(174,191,188,1) 22%,rgba(153,175,171,1) 33%,rgba(142,166,162,1) 50%,rgba(130,157,152,1) 67%,rgba(78,92,90,1) 82%,rgba(14,14,14,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(216,224,222,1) 0%,rgba(174,191,188,1) 22%,rgba(153,175,171,1) 33%,rgba(142,166,162,1) 50%,rgba(130,157,152,1) 67%,rgba(78,92,90,1) 82%,rgba(14,14,14,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+font-size: 24px;
+color: #ddd;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif  
+ 
+}
+
 .footer {
   min-height: 100px;
-  background: #E5E5E5;
   position: relative;
 }
 
@@ -10,5 +25,161 @@
   left: 0;
   right: 0;
   padding: 3px;
-  background: #B8B8B8;
+  background: rgb(5, 5, 5);
+  text-align: center;
+  position: fixed;
+  color: white;
+}
+Form {
+  background-color: #5d5e61 !important;
+  clear:both;
+  padding-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 0 9px rgb(156, 140, 140);
+
+}
+form input {
+  color: whitesmoke !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 18px !important;
+}
+.MuiTableCell-head-98 {
+  padding: 0 !important;
+  margin: 0 !important;  
+  padding-left: 10px !important;
+
+}
+.MuiInputBase-root {
+  color: whitesmoke !important;
+}
+.MuiFormHelperText-root-53 {
+  font-size: 18px !important;
+  color: whitesmoke !important;
+}
+ section {
+  background: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%);  margin-top: 70px;
+  background: white;
+  width: 100%;
+  padding: 1em;
+  overflow: auto;
+  max-width: 100%;
+  margin: auto;
+  padding-top: 100px;
+ }
+ .section-div {
+    width: 100%;
+    margin-top: 100px;
+ }
+.section {
+  background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%);
+}
+.MuiFormControl-root-1 {
+  padding: 0 !important;
+  margin: 0 !important;
+  display: grid !important;
+  padding-left: 20px !important;
+  
+}
+
+.tbody{
+background-color: #2554f0;
+margin-top: 30px;
+width: 50%;
+display: inline-table !important;
+}
+
+.h3 {
+  color: white !important;
+}
+.h3:hover {
+  background-color: rgb(15, 14, 14);
+}
+.h2 {
+  font-size: 28px;
+  color: white !important;
+  margin-top: 20px;
+}
+h1 {
+  color: whitesmoke !important;
+}
+
+.MuiInputLabel-root-5 {
+  padding: 0 !important;
+  margin: 0 !important;
+  padding-left: 20px !important;
+  color: whitesmoke !important;
+  font-size: 24px !important;
+
+}
+.chart {
+  background: radial-gradient(#d6d6d6, #9198e5);}
+.MuiTableCell-root-89 {
+  font-size: 24px !important;
+  color: whitesmoke !important;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+Table {
+  background-color: rgb(42, 133, 236) !important;
+  box-shadow: 0 5px rgb(241, 239, 239);
+}
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: rgb(30, 75, 223) !important;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  margin-top: 10px !important;
+  margin-left: 85% !important;
+  width: 100px;
+}
+.navbar-right {
+  margin-left: 30%;
+}
+.button:hover {background-color: red !important}
+
+.button:active {
+  background-color: #3e8e41 !important;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+@media only screen and (max-width: 760px) {
+  body {
+    background-color: lightblue !important;
+  }
+  .button {
+    margin-left: 40% !important;
+
+  }
+  .button:hover {
+    background-color: yellow !important;
+  }
+  .row {
+    margin-top: 10px !important;
+ }
+ .tbody{
+  padding: 0 !important;
+  background-color: #777373;
+  width: 100% !important;
+  }
+  .chart {
+    background-color: #3e8e41 !important;
+  }
+  .h3:hover {
+    background-color: rgb(31, 68, 231);
+  }
+  .navbar {
+    background-color: #777 !important;
+  }
+  .navbar-toggler {
+    background-color: white;
+  }
 }

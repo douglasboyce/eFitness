@@ -1,70 +1,94 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./style.css";
 
-// Depending on the current path, this component sets the "active" class on the appropriate navigation link item
+// Depending on the current path, this component sets the "active" className on the appropriate navigation link item
+
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-primary">
-      <Link className="navbar-brand" to="/">
-       <h2>{<i>e</i>}Fitness</h2>
-      </Link>
-      <div>
+    <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-primary">
+      <h2>{<i>e</i>}Fitness</h2>
+      <button
+        className="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span className="navbar-toggler-icon" />
+      </button>
+      <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
           <li className="nav-item">
             <Link
               to="/"
               className={
-                window.location.pathname === "/" || window.location.pathname === "/about"
+                window.location.pathname === "/" ||
+                window.location.pathname === "/about"
                   ? "nav-link active"
                   : "nav-link"
               }
             >
-              <h3>About</h3>
+              <h3 className="h3">About</h3>
             </Link>
           </li>
           <li className="nav-item">
             <Link
               to="/dashboard"
               className={
-                window.location.pathname === "/" || window.location.pathname === "/dashboard"
+                window.location.pathname === "/" ||
+                window.location.pathname === "/dashboard"
                   ? "nav-link active"
                   : "nav-link"
               }
             >
-              <h3>myDashboard</h3>
-            </Link>
-          </li>
-          {/**g added below this line */}
-          <li className="nav-item">
-            <Link
-              to="/sign in"
-              className={
-                window.location.pathname === "/" || window.location.pathname === "/dashboard"
-                  ? "nav-link active"
-                  : "nav-link"
-              }
-            >
-              <h3>Sign In </h3>
+              <h3 className="h3">BP Log</h3>
             </Link>
           </li>
           <li className="nav-item">
             <Link
-              to="/sign up"
+              to="/exerciseLog"
               className={
-                window.location.pathname === "/" || window.location.pathname === "/dashboard"
+                window.location.pathname === "/" ||
+                window.location.pathname === "exerciseLog"
                   ? "nav-link active"
                   : "nav-link"
               }
             >
-              <h3>Sign Up</h3>
+              <h3 className="h3">Exercise Log</h3>
             </Link>
           </li>
-          {/**g added line above this line */}
-    </ul>
-      </div>
+            <li className="nav-item">
+              <Link
+                to="/sign in"
+                className={
+                  window.location.pathname === "/" ||
+                  window.location.pathname === "/dashboard"
+                    ? "nav-link active"
+                    : "nav-link"
+                }
+              >
+                <h3 className="h3">SignIn </h3>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/sign up"
+                className={
+                  window.location.pathname === "/" ||
+                  window.location.pathname === "/dashboard"
+                    ? "nav-link active"
+                    : "nav-link"
+                }
+              >
+                <h3 className="h3">SignUp</h3>
+              </Link>
+            </li>
+          </ul>
+        </div>
     </nav>
-  );
-}
+    )
+    }
 
 export default Navbar;
