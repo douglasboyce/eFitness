@@ -1,11 +1,12 @@
 const router = require("express").Router();
 const BPController = require("../../controllers/BPController");
 
-// Matches with "/api/BPlists"
-router.route("/")
+// Matches with "/api/"
+  router
+  .route("/")
   .get(
     function (req, res) {
-      console.log("route been hit");
+      console.log("api route been hit");
       res.send('HELLO ROUTE');
     }
   )

@@ -22,7 +22,7 @@ function About() {
         <Row>
           <Col size="md-12">
           <p>
-              <i>e</i>Fitness is a health and exercise information app. It provides the user with information concerning their overall exercise and health information. It will display a table/chart of blood pressure values, pulse and weight (if recorded). It will also provide a list of exercise (by category, exercise  type) for the user to track their overall exercise routine.
+              <i>e</i>Fitness is a health and exercise information app. It provides the user with information concerning their overall exercise and health information. It will display a table/chart of blood pressure values, pulse and weight (if recorded). It will also provide a list of exercise (by category, exercise type) for the user to track their overall exercise routine.
             </p>
           </Col>
         </Row>

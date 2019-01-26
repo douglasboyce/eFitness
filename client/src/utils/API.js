@@ -10,11 +10,11 @@ export default {
     return axios.get("/api/bplogchart/" + id);
   },
   // Deletes the book with the given id
-  deletePLists: function(id) {
+  deleteBPLists: function(id) {
     return axios.delete("/api/bplogchart/" + id);
   },
   // Saves a book to the database
-  savePLists: function(bookData) {
-    return axios.post("/api/bplogchart", bookData);
+  saveBPLists: function(BPData) {
+    return axios.post("/api/bplogchart", BPData);
   }
 };

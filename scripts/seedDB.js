@@ -8,33 +8,33 @@ mongoose.connect(
   "mongodb://localhost/reactexerciselist"
 );
 
-const bpSeed = [
+const activitySeed = [
   {
-    systolic: 120,
-    siastolic: 78,
-    pulserate: 80,
-    weight: 142,
+    exerciseName: "Leg Press",
+    numberOfSets: 2,
+    numberOfReps: 30,
+    duration: "30 seconds",
     date: new Date(Date.now())
   },
   {
-    systolic: 117,
-    siastolic: 80,
-    pulserate: 72,
-    weight: 138,
+    exerciseName: "Leg Extension",
+    numberOfSets: 2,
+    numberOfReps: 30,
+    duration: "40 seconds",
     date: new Date(Date.now())
   },
   {
-    systolic: 122,
-    siastolic: 76,
-    pulserate: 78,
-    weight: 140,
+    exerciseName: "Abdominal",
+    numberOfSets: 2,
+    numberOfReps: 30,
+    duration: "1 minute",
     date: new Date(Date.now())
-  }
+  },
 ];
 
-db.BPList
+db.ActivityList
   .remove({})
-  .then(() => db.BPList.collection.insertMany(bpSeed))
+  .then(() => db.ActivityList.collection.insertMany(activitySeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
@@ -43,3 +43,4 @@ db.BPList
     console.error(err);
     process.exit(1);
   });
+

@@ -38,8 +38,22 @@ function Navbar() {
               to="/dashboard"
               className={
                 window.location.pathname === "/" ||
-                window.location.pathname === "/dashboard"
+                window.location.pathname === "/dashboard"  ? "nav-link active"
+                window.location.pathname === "/" || window.location.pathname === "/dashboard"
                   ? "nav-link active"
+                  : "nav-link"
+              }
+            >
+              <h3>Blood Pressure Log</h3>
+            </Link>
+          </li>
+          {/**g added below this line */}
+          <li className="nav-item">
+            <Link
+              to="/sign in"
+              className={
+                window.location.pathname === "/" || window.location.pathname === "/dashboard"
+                  ? "nav-link disable"
                   : "nav-link"
               }
             >

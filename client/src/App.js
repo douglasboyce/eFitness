@@ -1,7 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route,Switch } from "react-router-dom";
 import About from "./pages/About";
-import Dashboard from "./pages/Dashboard";
+import BPLog from "./pages/BPLog";
+import ExerciseLog from "./pages/ExerciseLog";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
@@ -10,6 +11,7 @@ import Wrapper from "./components/Wrapper";
 import ExerciseLog from "./pages/ExerciseLog";
 import SignInForm from "./pages/SignInForm";
 import SignUpForm from "./pages/SignUpForm";
+import Dashboard from "./pages/Dashboard";
 
 
 function App() {
@@ -27,7 +29,7 @@ function App() {
           <Route exact path="/SignIn" component={SignInForm} />
           </Switch>
         </Wrapper>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </Router>
   );
