@@ -7,6 +7,7 @@ class Form extends React.Component {
     super();
     this.state = {
       dayOfTheWeek: "",         
+      time: "",
       systolic: "",
       diastolic: "",
       pulserate: "",
@@ -44,6 +45,12 @@ class Form extends React.Component {
             name="dayOfTheWeek"
             label="Enter day of the Week"
             value={this.state.dayOfTheWeek}
+            onChange={e => this.change(e)}
+          />
+           <TextField
+            name="time"
+            label="Enter time"
+            value={this.state.time}
             onChange={e => this.change(e)}
           />
           <TextField

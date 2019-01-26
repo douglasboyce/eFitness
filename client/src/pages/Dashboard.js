@@ -14,7 +14,7 @@ class Dashboard extends Component {
     this.state = {
       BPdata: {
         dayOfTheWeek: "",
-        date: "",
+        time: "",
         diastolic: "",
         systolic: "",
         pulserate: "",
@@ -159,8 +159,8 @@ class Dashboard extends Component {
                       prop: "dayOfTheWeek"
                     },
                     {
-                      name: "Date",
-                      prop: "date"
+                      name: "Time",
+                      prop: "time"
                     },
                     {
                       name: "Systolic",
