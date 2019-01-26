@@ -1,11 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-<<<<<<< HEAD
 const BPListSchema = new Schema({
-=======
-
-let BPListSchema = new Schema({
->>>>>>> 5a46bb6ea46645dd953cd5199f33eee42e1d30ff
   dayOfTheWeek: {
     type: String
     //required: true
@@ -31,7 +26,6 @@ let BPListSchema = new Schema({
        default: Date.now 
       }
       //required: true
-<<<<<<< HEAD
 /*const BloodPressureList = new Schema({
   systolic: { 
     type: Number, 
@@ -49,9 +43,6 @@ let BPListSchema = new Schema({
     type: Date,
      default: Date.now 
     }*/
-=======
-     }
->>>>>>> 5a46bb6ea46645dd953cd5199f33eee42e1d30ff
 });
 
 const BPList = mongoose.model("BPList", BPListSchema);
