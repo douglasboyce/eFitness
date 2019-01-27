@@ -85,7 +85,7 @@ form input {
 label.jss16 {
     color: white !important;
     font-size: 20px;
-    text-align: center !important;
+    padding-left: 30px !important;
 }
 div.jss1 {
   display: block !important;
@@ -119,6 +119,9 @@ div.jss1 {
   font-size: 20px !important;
   color: white !important;  
   border: 1px solid #ddd !important;
+}
+.jss23 {
+  position: static !important;
 }
 h1 {
   color: #5d5e61 !important;
