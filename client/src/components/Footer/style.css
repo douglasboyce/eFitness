@@ -2,15 +2,9 @@
     box-sizing: border-box;
   }
 body {
-  
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d8e0de+0,aebfbc+22,99afab+33,8ea6a2+50,829d98+67,4e5c5a+82,0e0e0e+100;Grey+3D */
-background: rgb(216,224,222); /* Old browsers */
-background: -moz-linear-gradient(top, rgba(216,224,222,1) 0%, rgba(174,191,188,1) 22%, rgba(153,175,171,1) 33%, rgba(142,166,162,1) 50%, rgba(130,157,152,1) 67%, rgba(78,92,90,1) 82%, rgba(14,14,14,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, rgba(216,224,222,1) 0%,rgba(174,191,188,1) 22%,rgba(153,175,171,1) 33%,rgba(142,166,162,1) 50%,rgba(130,157,152,1) 67%,rgba(78,92,90,1) 82%,rgba(14,14,14,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, rgba(216,224,222,1) 0%,rgba(174,191,188,1) 22%,rgba(153,175,171,1) 33%,rgba(142,166,162,1) 50%,rgba(130,157,152,1) 67%,rgba(78,92,90,1) 82%,rgba(14,14,14,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+background: linear-gradient(black, white);
 font-size: 24px;
-color: #ddd;
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif  
+font-family: Georgia, Times, 'Times New Roman', serif; 
  
 }
 
@@ -31,17 +25,24 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
   color: white;
 }
 Form {
-  background-color: #5d5e61 !important;
+  background-color: #8b8e91 !important;
   clear:both;
   padding-bottom: 20px;
   border-radius: 15px;
   box-shadow: 0 9px rgb(156, 140, 140);
-
+}
+.form {
+  background-color: rgb(80, 78, 78) !important;
 }
 form input {
   color: whitesmoke !important;
   font-family: Arial, Helvetica, sans-serif !important;
   font-size: 18px !important;
+}
+.about-para {
+  color: darkblue !important;
+  font-size: 24px !important;
+
 }
 .MuiTableCell-head-98 {
   padding: 0 !important;
@@ -57,21 +58,22 @@ form input {
   color: whitesmoke !important;
 }
  section {
-  background: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%);  margin-top: 70px;
-  background: white;
   width: 100%;
   padding: 1em;
   overflow: auto;
   max-width: 100%;
   margin: auto;
-  padding-top: 100px;
+  padding-top: 80px;
  }
  .section-div {
     width: 100%;
     margin-top: 100px;
  }
 .section {
-  background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%);
+  background: radial-gradient(circle at 100%, rgb(252, 255, 254), rgb(131, 209, 240) 50%, #eee 80%, rgb(155, 248, 163) 75%);
+}
+.exe-section {
+  background: radial-gradient(circle at 100%, rgb(255, 210, 210), rgb(134, 250, 203) 50%, #eee 80%, rgb(107, 140, 184) 75%);
 }
 .MuiFormControl-root-1 {
   padding: 0 !important;
@@ -80,29 +82,31 @@ form input {
   padding-left: 20px !important;
   
 }
-
-.tbody{
-background-color: #2554f0;
-margin-top: 30px;
-width: 50%;
-display: inline-table !important;
-}
-
 .h3 {
   color: white !important;
 }
 .h3:hover {
-  background-color: rgb(15, 14, 14);
+  background-color: red;
 }
 .h2 {
   font-size: 28px;
-  color: white !important;
+  font-weight: 700 !important;
+  color: #333 !important;
   margin-top: 20px;
 }
 h1 {
-  color: whitesmoke !important;
+  color: #5d5e61 !important;
+  font-weight: 700 !important;
 }
-
+.about-h1 {
+  color: #333 !important;
+}
+.about-h1f, .nav-h2, .nav-h3 {
+  color: white !important;
+}
+.about-div {
+  margin-top: 100px;
+}
 .MuiInputLabel-root-5 {
   padding: 0 !important;
   margin: 0 !important;
@@ -112,15 +116,23 @@ h1 {
 
 }
 .chart {
-  background: radial-gradient(#d6d6d6, #9198e5);}
+  background: radial-gradient(#d6d6d6, #9198e5);
+}
 .MuiTableCell-root-89 {
   font-size: 24px !important;
   color: whitesmoke !important;
   border: 1px solid #ddd;
   text-align: left;
 }
-Table {
-  background-color: rgb(42, 133, 236) !important;
+.tbody{
+  background-color: #4286f4;
+  margin-top: 30px;
+  width: 50%;
+  display: inline-table !important;
+  }
+  
+.exe-tbody {
+  background-color: rgb(65, 65, 65) !important;
   box-shadow: 0 5px rgb(241, 239, 239);
 }
 .button {
@@ -140,11 +152,13 @@ Table {
   margin-left: 85% !important;
   width: 100px;
 }
+
 .navbar-right {
   margin-left: 30%;
 }
-.button:hover {background-color: red !important}
-
+.button:hover {
+  background-color: red !important;
+}
 .button:active {
   background-color: #3e8e41 !important;
   box-shadow: 0 5px #666;

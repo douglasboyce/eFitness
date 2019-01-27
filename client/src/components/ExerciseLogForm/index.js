@@ -7,7 +7,8 @@ class MyForm extends React.Component {
     super();
     this.state = {
       exerciseDay: "",
-      exerciseName: "",      
+      exerciseName: "", 
+      pounds: "",     
       duration: "",
       numberOfSets: "",
       numberOfReps: ""
@@ -28,7 +29,8 @@ class MyForm extends React.Component {
     // clear form
     this.setState({
       exerciseDay: "",
-      exerciseName: "",      
+      exerciseName: "", 
+      pounds: "",     
       duration: "",
       numberOfSets: "",
       numberOfReps: ""
@@ -38,7 +40,7 @@ class MyForm extends React.Component {
   render() {
     return (
       <div>
-        <form>
+        <form className="form">
           <TextField
             name="exerciseDay"
             label="Enter exercise Day"
@@ -47,13 +49,19 @@ class MyForm extends React.Component {
           />
           <TextField
             name="exerciseName"
-            label="Enter exerciseName"
+            label="Enter exercise Name"
             value={this.state.exerciseName}
+            onChange={e => this.change(e)}
+          />
+             <TextField
+            name="pounds"
+            label="Enter Pounds"
+            value={this.state.pounds}
             onChange={e => this.change(e)}
           />
           <TextField
             name="duration"
-            label="Enter the duration"
+            label="Enter duration"
             value={this.state.duration}
             onChange={e => this.change(e)}
           />

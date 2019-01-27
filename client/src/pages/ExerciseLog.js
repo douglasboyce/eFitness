@@ -95,13 +95,13 @@ getExerciseData() {
   //BPInput An BPTable//
   render() {
     return (
-    <section className="section">
+    <section className="exe-section">
       <div className="container">
         <Container className="exe-container">
               <h1 className="text-center">Exercise Log</h1>
               <hr />
             <Row>
-              <Col size="md-8">
+              <Col size="md-12">
                 <Form onSubmit={this.onSubmit} />
             <h2 className="h2">Exercise Log Table</h2>
                 <Table
@@ -119,6 +119,10 @@ getExerciseData() {
                     {
                       name: "Exercise Name",
                       prop: "exerciseName"
+                    },
+                    {
+                      name: "Pounds",
+                      prop: "pounds"
                     },
                     {
                       name: "Duration",

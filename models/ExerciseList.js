@@ -10,6 +10,10 @@ const ExerciseSchema = new Schema({
     type: String, 
     required: true 
   },
+  pounds: { 
+    type: String, 
+    required: true 
+  },
   numberOfSets: {
      type: Number , 
      },

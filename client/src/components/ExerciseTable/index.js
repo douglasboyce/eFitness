@@ -46,7 +46,7 @@ class ExerciseTable extends React.Component {
     } = this.props;
 
     return (
-      <Table className="tbody">
+      <Table className="exe-tbody">
         <TableHead className="table-head">
           <TableRow>
             {header.map((x, i) => (

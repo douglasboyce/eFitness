@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-primary">
-      <h2>{<i>e</i>}Fitness</h2>
+      <h2 className="nav-h2">{<i>e</i>}Fitness</h2>
       <button
         className="navbar-toggler"
         type="button"
@@ -37,21 +37,9 @@ function Navbar() {
             <Link
               to="/dashboard"
               className={
-                window.location.pathname === "/" || window.location.pathname === "/dashboard"
+                window.location.pathname === "/" ||
+                window.location.pathname === "/dashboard"
                   ? "nav-link active"
-                  : "nav-link"
-              }
-            >
-              <h3>Blood Pressure Log</h3>
-            </Link>
-          </li>
-          {/**g added below this line */}
-          <li className="nav-item">
-            <Link
-              to="/sign in"
-              className={
-                window.location.pathname === "/" || window.location.pathname === "/dashboard"
-                  ? "nav-link disable"
                   : "nav-link"
               }
             >
@@ -71,36 +59,10 @@ function Navbar() {
               <h3 className="h3">Exercise Log</h3>
             </Link>
           </li>
-            <li className="nav-item">
-              <Link
-                to="/sign in"
-                className={
-                  window.location.pathname === "/" ||
-                  window.location.pathname === "/dashboard"
-                    ? "nav-link active"
-                    : "nav-link"
-                }
-              >
-                <h3 className="h3">SignIn </h3>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/sign up"
-                className={
-                  window.location.pathname === "/" ||
-                  window.location.pathname === "/dashboard"
-                    ? "nav-link active"
-                    : "nav-link"
-                }
-              >
-                <h3 className="h3">SignUp</h3>
-              </Link>
-            </li>
-          </ul>
-        </div>
+        </ul>
+      </div>
     </nav>
-    )
-    }
+  );
+}
 
 export default Navbar;
