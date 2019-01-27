@@ -101,7 +101,7 @@ getExerciseData() {
               <h1 className="text-center">Exercise Log</h1>
               <hr />
             <Row>
-              <Col size="md-12">
+              <Col size="md-6">
                 <Form onSubmit={this.onSubmit} />
             <h2 className="h2">Exercise Log Table</h2>
                 <Table

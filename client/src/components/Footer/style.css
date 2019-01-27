@@ -116,10 +116,13 @@ div.jss1 {
     vertical-align: top;
     color: white;
 }
-.jss87, .jss91  {
+.jss87, .jss91, .jss90  {
   font-size: 24px !important;
-  color: white !important;
+  color: white !important;  
+  font-weight: 700 !important;
+  border: 1px solid #ddd !important;
 }
+
 h1 {
   color: #5d5e61 !important;
   font-weight: 700 !important;
