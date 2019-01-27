@@ -91,7 +91,7 @@ label.jss16 {
     font-size: 20px;
 }
 div.jss1 {
-  display: inline-block !important;
+  display: block !important;
 }
 .h3 {
   color: white !important;
@@ -115,6 +115,10 @@ div.jss1 {
     flex-direction: column;
     vertical-align: top;
     color: white;
+}
+.jss87, .jss91  {
+  font-size: 24px !important;
+  color: white !important;
 }
 h1 {
   color: #5d5e61 !important;
