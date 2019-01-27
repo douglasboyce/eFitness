@@ -108,21 +108,24 @@ div.jss1 {
 .jss1 {
   margin: 0;
     border: 0;
-    /* display: inline-flex; */
     padding: 0;
     position: relative;
     min-width: 0;
     flex-direction: column;
     vertical-align: top;
     color: white;
+    font-weight: 700 !important;
+    font-size: 20px !important;
+    text-align: center !important;
 }
 .jss87, .jss91, .jss90  {
-  font-size: 24px !important;
+  font-size: 20px !important;
   color: white !important;  
-  font-weight: 700 !important;
   border: 1px solid #ddd !important;
 }
-
+.jss53 {
+  margin-left: 50% !important;
+}
 h1 {
   color: #5d5e61 !important;
   font-weight: 700 !important;
