@@ -88,7 +88,10 @@ label.jss16 {
     display: grid !important;
     padding-left: 20px !important;
     color: white !important;
-    
+    font-size: 20px;
+}
+div.jss1 {
+  display: inline-block !important;
 }
 .h3 {
   color: white !important;
