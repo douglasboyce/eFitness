@@ -83,12 +83,9 @@ form input {
   
 }
 label.jss16 {
-    padding: 0 !important;
-    margin: 0 !important;
-    display: grid !important;
-    padding-left: 20px !important;
     color: white !important;
     font-size: 20px;
+    text-align: center !important;
 }
 div.jss1 {
   display: block !important;
@@ -105,7 +102,7 @@ div.jss1 {
   color: #333 !important;
   margin-top: 20px;
 }
-.jss1, .jss16 {
+.jss1 {
   margin: 0;
     border: 0;
     padding: 0;
@@ -122,9 +119,6 @@ div.jss1 {
   font-size: 20px !important;
   color: white !important;  
   border: 1px solid #ddd !important;
-}
-.jss54 {
-  margin-left: 50% !important;
 }
 h1 {
   color: #5d5e61 !important;
@@ -181,7 +175,7 @@ h1 {
   border-radius: 15px;
   box-shadow: 0 9px #999;
   margin-top: 10px !important;
-  margin-left: 85% !important;
+  margin-left: 40% !important;
   width: 100px;
 }
 
