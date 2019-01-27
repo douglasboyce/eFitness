@@ -82,6 +82,14 @@ form input {
   padding-left: 20px !important;
   
 }
+label.jss16 {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: grid !important;
+    padding-left: 20px !important;
+    color: white !important;
+    
+}
 .h3 {
   color: white !important;
 }
