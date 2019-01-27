@@ -13,7 +13,6 @@
   "bugs": {
     "url": "https://github.com/douglasboyce/eFitness/issues"
   },
-  "homepage": "https://github.com/douglasboyce/eFitness#readme",
   "proxy": "http://localhost:3001",
   "dependencies": {
     "@material-ui/core": "^3.9.0",
