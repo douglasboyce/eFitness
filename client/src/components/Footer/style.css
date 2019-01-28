@@ -34,10 +34,8 @@ Form {
   background-color: rgb(80, 78, 78) !important;
 }
 form input {
-  color: whitesmoke !important;
   font-family: Arial, Helvetica, sans-serif !important;
   font-size: 18px !important;
-  text-align: center;
 }
 .about-para {
   color: darkblue !important;
