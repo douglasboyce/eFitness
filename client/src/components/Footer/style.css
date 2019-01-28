@@ -33,10 +33,12 @@ Form {
 .form {
   background-color: rgb(80, 78, 78) !important;
 }
+/*
 form input {
   font-family: Arial, Helvetica, sans-serif !important;
   font-size: 18px !important;
 }
+*/
 .about-para {
   color: darkblue !important;
   font-size: 24px !important;
@@ -83,7 +85,7 @@ form input {
 /*this id good*/
 label.jss16 {
     color: white !important;
-    font-size: 20px;
+    font-size: 24px;
     padding-left: 30px !important;
     font-family: Georgia, Times, 'Times New Roman', serif !important; 
 }
@@ -93,6 +95,10 @@ div.jss1 {
 }
 .h3 {
   color: white !important;
+}
+label + .jss24 {
+  width: 100%;
+  margin-top: 24px;
 }
 .h3:hover {
   background-color: red;
@@ -110,11 +116,11 @@ div.jss1 {
     font-size: 20px !important;
     position: relative !important;
 }
-
-.jss46{
-  padding: 0 !important;
-}
 */
+.jss46{
+  font-size: 24px;
+}
+
 .jss87, .jss91, .jss90  {
   font-size: 20px !important;
   color: white !important;  
@@ -126,7 +132,7 @@ div.jss1 {
 }
 */
 .jss36 {
-  display: block;
+  display: inline-block;
 }
 h1 {
   color: #5d5e61 !important;
