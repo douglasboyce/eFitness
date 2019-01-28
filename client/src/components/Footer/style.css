@@ -153,6 +153,11 @@ background-color: darkred;
   position: static !important;
 }
 */
+.jss82 {
+  padding-bottom: 20px;
+  border-radius: 20px;
+  box-shadow: 0 9px rgb(58, 52, 52);
+}
 .jss36 {
   display: inline-block;
 }
