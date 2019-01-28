@@ -4,7 +4,8 @@ React Fitness and Exercise Log
 ##
 PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-# heroku deployed app link
+# heroku deployed app link <br>
 https://agile-temple-96461.herokuapp.com
 
-# GitHub app link
+# GitHub app link <br>
+https://github.com/douglasboyce/eFitness
