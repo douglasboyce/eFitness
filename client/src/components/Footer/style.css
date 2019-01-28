@@ -50,6 +50,9 @@ form input {
   padding-left: 10px !important;
 
 }
+.MuiTableCell-head-90 {
+  background-color: #3e8e41 !important;
+}
 .MuiInputBase-root {
   color: whitesmoke !important;
 }
