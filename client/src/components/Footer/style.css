@@ -97,8 +97,9 @@ div.jss1 {
   color: white !important;
 }
 label + .jss24 {
-  width: 100%;
-  margin-top: 24px;
+  width: 100% !important;
+  margin-top: 24px !important;
+  padding-left: 25px !important;
 }
 .h3:hover {
   background-color: red;
@@ -118,7 +119,7 @@ label + .jss24 {
 }
 */
 .jss46{
-  font-size: 24px;
+  font-size: 24px !important;
 }
 
 .jss87, .jss91, .jss90  {
