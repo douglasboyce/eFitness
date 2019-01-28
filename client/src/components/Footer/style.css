@@ -130,11 +130,19 @@ label + .jss24 {
 .jss46{
   font-size: 24px !important;
 }
-
+.jss91:hover {
+  background-color: black;
+}
+.jss90 {
+  color: #333 !important;
+}
 .jss87, .jss91, .jss90  {
   color: white !important;  
   border: 1px solid #ddd !important;
   font-size: 30px !important;
+}
+.MuiTableCell-body-91:hover {
+background-color: darkred;
 }
 /*
 .jss23 {
