@@ -102,31 +102,17 @@ div.jss1 {
   font-weight: 700 !important;
   color: #333 !important;
   margin-top: 20px;
-}/*
+}
 .jss1 {
-  margin: 0;
-    border: 0;
-    padding: 0;
-    position: relative;
-    min-width: 0;
-    flex-direction: column;
-    vertical-align: top;
     color: white;
     font-weight: 700 !important;
     font-size: 20px !important;
-    text-align: center !important;
+    position: relative !important;
 }
-*/
-jss27:after {
-  left: 0;
-  right: 0;
-  bottom: 0;
-  content: "";
-  position: absolute;
-  transition: transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
-  border-bottom: 2px solid #303f9f;
-  pointer-events: none;
+.jss46{
+  padding: 0 !important;
 }
+
 .jss87, .jss91, .jss90  {
   font-size: 20px !important;
   color: white !important;  
