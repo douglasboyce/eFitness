@@ -134,10 +134,11 @@ label + .jss24 {
   font-size: 24px !important;
 }
 .jss91:hover {
-  background-color: black;
+  background-color: rgb(204, 79, 79);
 }
 .jss90 {
   color: #333 !important;
+  background-color: #3e8e41 !important;
 }
 .jss87, .jss91, .jss90  {
   color: white !important;  
