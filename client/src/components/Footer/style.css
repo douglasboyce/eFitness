@@ -96,10 +96,19 @@ div.jss1 {
 .h3 {
   color: white !important;
 }
+label + .MuiInput-formControl-24 {
+  margin-top: 24px !important;
+  font-size: 30px !important;
+  color: white !important;
+}
+/* form input fields*/
 label + .jss24 {
   width: 100% !important;
   margin-top: 24px !important;
   padding-left: 25px !important;
+  font-size: 30px !important;
+  font-weight: 700 !important;
+  color: white !important;
 }
 .h3:hover {
   background-color: red;
