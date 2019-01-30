@@ -173,7 +173,7 @@ class Dashboard extends Component {
                    
                     {
                       prop: "pulserate",
-                      name: "Pulserate"
+                      name: "Pulse Rate"
                     },
                     {
                       name: "Weight",

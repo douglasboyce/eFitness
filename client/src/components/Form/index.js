@@ -56,7 +56,7 @@ class Form extends React.Component {
 
     if (this.state.pulserate === "") {
       isError = true;
-      errors.pulserateError = "Pulserate field can not be empty!";
+      errors.pulserateError = "Pulse rate field can not be empty!";
     }
     if (this.state.weight === "") {
       isError = true;
@@ -94,7 +94,7 @@ class Form extends React.Component {
   render() {
     return (
       <div>
-        <form style={{ backgroundColor: "#C0C0C0" }} onSubmit={this.onSubmit}>
+        <form onSubmit={this.onSubmit}>
           <TextField
             name="dayOfTheWeek"
             label="Enter day of the Week"
@@ -145,8 +145,8 @@ class Form extends React.Component {
           />
           <TextField
             name="pulserate"
-            label="Pulserate"
-            floatinglabeltext="Pulserate"
+            label="Pulse rate"
+            floatinglabeltext="Pulse rate"
             value={this.state.pulserate}
             onChange={e => this.change(e)}
             helperText={this.state.pulserateError}
