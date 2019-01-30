@@ -186,7 +186,7 @@ class Dashboard extends Component {
             <Row>
               <Col size="md-6">
                 <hr />
-                <h2 className="h2">BP Chart</h2>
+               {/* <h2 className="h2">BP Chart</h2>
                 {/* <Chart className="chart"
                   chartData={this.state.chartData}
                   week="1"
