@@ -25,13 +25,17 @@ font-family: Georgia, Times, 'Times New Roman', serif;
   color: white;
 }
 Form {
-  background-color: #8b8e91 !important;
+  background-color: #21303f !important;
   padding-bottom: 20px;
   border-radius: 15px;
   box-shadow: 0 9px rgb(156, 140, 140);
 }
 .form {
   background-color: rgb(80, 78, 78) !important;
+}
+.MuiFormHelperText-root-118.MuiFormHelperText-error-119 {
+  color: red !important;
+  font-size: 18px;
 }
 /*
 form input {
