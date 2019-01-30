@@ -1,4 +1,4 @@
-# Expense.
+## eFitness
 
 A health and fitness tracker built with react.js
 
@@ -16,7 +16,7 @@ Deployed app: https://quiet-spire-74175.herokuapp.com
 
     1. clone repository
     2. yarn- run this in root and in Efitness client directory
-    3  navigate to Efitnessclient and type yarn build in CLI
+    3  navigate to efitness client and type yarn build in CLI
     5. After build completed navigate to root and type yarn start.
     6. This should launch your local brower, or go to localhost:NNNN in your browser
 
@@ -27,14 +27,15 @@ Douglas Boyce:
 - Portfolio: https://douglasboyce.github.io
 
 Grant
-- Github:
-- Portfolio
+-Github: https://github.com/Ggoings
+-Portfolio: ggoings.github.io/
 
 Thomas Fricke
-- Github
-- Portfolio
+- Github: https://github.com/TomFricke
+- Portfolio: https://tomfricke.github.io/Responsive-Portfolio/
 
 G Worku
-- Github
-- Portfolio
+- Github: https://github.com/gezahegnw
+- Portfolio: https://github.com/gezahegnw/gezahegnw.github.io
+
 
