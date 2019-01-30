@@ -143,7 +143,7 @@ class Dashboard extends Component {
             <h1 className="text-center">My Blood Pressure Log</h1>
             <hr />
             <Row>
-              <Col size="md-6">
+              <Col size="md-8">
                 <Form onSubmit={this.onSubmit} />
                 <h2 className="h2">Personal Information Log</h2>
                 <Table
