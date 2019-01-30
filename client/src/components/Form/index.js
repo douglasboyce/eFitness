@@ -15,7 +15,7 @@ class Form extends React.Component {
       diastolic: "",
       diastolicError: "",
       pulserate: "",
-      pulseratError: "",
+      pulserateError: "",
       weight: "",
       weightError: ""
     };
@@ -54,9 +54,9 @@ class Form extends React.Component {
       errors.diastolicError = "Diastolic field  can not be empty!";
     }
 
-    if (this.state.pulserat === "") {
+    if (this.state.pulserate === "") {
       isError = true;
-      errors.pulseratError = "Pulserat field can not be empty!";
+      errors.pulserateError = "Pulserat field can not be empty!";
     }
     if (this.state.weight === "") {
       isError = true;
@@ -100,12 +100,12 @@ class Form extends React.Component {
             label="Enter day of the Week"
             floatinglabeltext="Day Of The Week"
             value={this.state.dayOfTheWeek}
-            errorText={this.state.dayOfTheWeekError}
-            floatingLabelFixed
+            helperText={this.state.dayOfTheWeekError}
             onChange={e => this.change(e)}
             type="text"
             pattern="[A-Za-z]"
             required
+            error = {this.state.dayOfTheWeekError ? true : false}
           />
           <TextField
             name="time"
@@ -113,11 +113,11 @@ class Form extends React.Component {
             floatinglabeltext="Time"
             value={this.state.time}
             onChange={e => this.change(e)}
-            errorText={this.state.timeError}
-            floatingLabelFixed
+            helperText={this.state.timeError}
             type="text"
             pattern="[a-zA-Z0-9-]"
             required
+            error = {this.state.timeError ? true : false}
           />
           <TextField
             name="systolic"
@@ -125,11 +125,11 @@ class Form extends React.Component {
             floatinglabeltext="Systolic"
             value={this.state.systolic}
             onChange={e => this.change(e)}
-            errorText={this.state.systolicError}
-            floatingLabelFixed
+            helperText={this.state.systolicError}
             type="number"
             pattern="[0-9-]"
             required
+            error = {this.state.systolicError ? true : false}
           />
           <TextField
             name="diastolic"
@@ -137,11 +137,11 @@ class Form extends React.Component {
             floatinglabeltext="Diastolic"
             value={this.state.diastolic}
             onChange={e => this.change(e)}
-            errorText={this.state.diastolicError}
-            floatingLabelFixed
+            helperText={this.state.diastolicError}
             type="number"
             pattern="[0-9-]"
             required
+            error = {this.state.diastolicError ? true : false}
           />
           <TextField
             name="pulserate"
@@ -149,11 +149,11 @@ class Form extends React.Component {
             floatinglabeltext="Pulserate"
             value={this.state.pulserate}
             onChange={e => this.change(e)}
-            errorText={this.state.pulseratError}
-            floatingLabelFixed
+            helperText={this.state.pulserateError}
             type="number"
             pattern="[0-9-]"
             required
+            error = {this.state.pulserateError ? true : false}
           />
           <TextField
             name="weight"
@@ -161,11 +161,11 @@ class Form extends React.Component {
             floatinglabeltext="Weight"
             value={this.state.weight}
             onChange={e => this.change(e)}
-            errorText={this.state.weightError}
-            floatingLabelFixed
+            helperText={this.state.weightError}
             type="text"
             pattern="[a-zA-Z0-9-]"
             required
+            error = {this.state.weightError ? true : false}
           />
           <Button className="button" onClick={e => this.onSubmit(e)}>
             Submit

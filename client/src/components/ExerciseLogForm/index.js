@@ -29,6 +29,7 @@ class MyForm extends React.Component {
   };
 
   validate = () => {
+console.log(this.state);
     let isError = false;
     const errors = {
       exerciseDayError: "",
@@ -104,11 +105,11 @@ class MyForm extends React.Component {
             floatinglabeltext="Exercise Day"
             value={this.state.exerciseDay}
             onChange={e => this.change(e)}
-            errorText={this.state.exerciseDayError}
-            floatingLabelFixed
+            helperText={this.state.exerciseDayError}
             type="text"
             pattern="[A-Za-z]"
             required
+            error = {this.state.exerciseDayError ? true : false}
           />
           <TextField
             name="exerciseName"
@@ -116,11 +117,11 @@ class MyForm extends React.Component {
             floatinglabeltext="Exercise Name"
             value={this.state.exerciseName}
             onChange={e => this.change(e)}
-            errorText={this.state.exerciseNameError}
-            floatingLabelFixed
+            helperText={this.state.exerciseNameError}
             type="text"
             pattern="[A-Za-z]"
             required
+            error = {this.state.exerciseNameError ? true : false}
           />
           <TextField
             name="pounds"
@@ -128,11 +129,11 @@ class MyForm extends React.Component {
             floatinglabeltext="Enter Pounds"
             value={this.state.pounds}
             onChange={e => this.change(e)}
-            errorText={this.state.poundsError}
-            floatingLabelFixed
+            helperText={this.state.poundsError}
             type="text"
             pattern="[a-zA-Z0-9-]"
             required
+            error = {this.state.poundsError ? true : false}
           />
           <TextField
             name="duration"
@@ -140,11 +141,11 @@ class MyForm extends React.Component {
             floatinglabeltext="Enter Duration"
             value={this.state.duration}
             onChange={e => this.change(e)}
-            errorText={this.state.durationError}
-            floatingLabelFixed
+            helperText={this.state.durationError}
             type="text"
             pattern="[a-zA-Z0-9-]"
             required
+            error = {this.state.durationError ? true : false}
           />
           <TextField
             name="numberOfSets"
@@ -152,11 +153,11 @@ class MyForm extends React.Component {
             floatinglabeltext="Enter number Of Sets"
             value={this.state.numberOfSets}
             onChange={e => this.change(e)}
-            errorText={this.state.numberOfSetsError}
-            floatingLabelFixed
+            helperText={this.state.numberOfSetsError}
             type="number"
             pattern="[0-9-]"
             required
+            error = {this.state.numberOfSetsError ? true : false}
           />
           <TextField
             name="numberOfReps"
@@ -164,11 +165,11 @@ class MyForm extends React.Component {
             floatinglabeltext="Enter number Of Reps "
             value={this.state.numberOfReps}
             onChange={e => this.change(e)}
-            errorText={this.state.numberOfRepsError}
-            floatingLabelFixed
+            helperText={this.state.numberOfRepsError}
             type="number"
             pattern="[0-9-]"
             required
+            error = {this.state.numberOfRepsError ? true : false}
           />
           <Button className="button" onClick={e => this.onSubmit(e)}>
             Submit
