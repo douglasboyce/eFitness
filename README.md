@@ -2,7 +2,9 @@
 
 A health and fitness tracker built with react.js
 
-Deployed app: https://quiet-spire-74175.herokuapp.com
+Deployed app: https://tranquil-savannah-82874.herokuapp.com/
+
+Presenation: https://prezi.com/p/c2p9gmifh4h0/efitness/
 
 # Tech Overview
     Framework - Rect with bootstrap and CSS for styling
@@ -37,5 +39,3 @@ Thomas Fricke
 G Worku
 - Github: https://github.com/gezahegnw
 - Portfolio: https://github.com/gezahegnw/gezahegnw.github.io
-
-
