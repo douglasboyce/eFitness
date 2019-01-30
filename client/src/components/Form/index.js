@@ -33,7 +33,7 @@ class Form extends React.Component {
       timeError: "",
       systolicError: "",
       diastolicError: "",
-      pulseratError: "",
+      pulserateError: "",
       weightError: ""
     };
 
@@ -56,7 +56,7 @@ class Form extends React.Component {
 
     if (this.state.pulserate === "") {
       isError = true;
-      errors.pulserateError = "Pulserat field can not be empty!";
+      errors.pulserateError = "Pulserate field can not be empty!";
     }
     if (this.state.weight === "") {
       isError = true;
@@ -85,7 +85,7 @@ class Form extends React.Component {
         diastolic: "",
         diastolicError: "",
         pulserate: "",
-        pulseratError: "",
+        pulserateError: "",
         weight: "",
         weightError: ""
       });
