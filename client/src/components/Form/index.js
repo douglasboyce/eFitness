@@ -39,28 +39,28 @@ class Form extends React.Component {
 
     if (this.state.dayOfTheWeek === "") {
       isError = true;
-      errors.dayOfTheWeekError = "Days field can not be empty!";
+      errors.dayOfTheWeekError = "Days field is required! Can not be empty!";
     }
     if (this.state.time === "") {
       isError = true;
-      errors.timeError = "Time field can not be empty!";
+      errors.timeError = "Time field is required! Can not be empty!";
     }
     if (this.state.systolic === "") {
       isError = true;
-      errors.systolicError = "systolic field can not be empty!";
+      errors.systolicError = "Systolic field is required! Can not be empty!";
     }
     if (this.state.diastolic === "") {
       isError = true;
-      errors.diastolicError = "Diastolic field  can not be empty!";
+      errors.diastolicError = "Diastolic field is required! Can not be empty!";
     }
 
     if (this.state.pulserate === "") {
       isError = true;
-      errors.pulserateError = "Pulse rate field can not be empty!";
+      errors.pulserateError = "Pulse rate field is required! Can not be empty!";
     }
     if (this.state.weight === "") {
       isError = true;
-      errors.weightError = "Weight field  can not be empty!";
+      errors.weightError = "Weight field is required! Can not be empty!";
     }
     this.setState({
       ...this.state,

@@ -42,27 +42,27 @@ console.log(this.state);
 
     if (this.state.exerciseDay === "") {
       isError = true;
-      errors.exerciseDayError = "Exercise day field can not be empty!";
+      errors.exerciseDayError = "Exercise day field is required! Can not be empty!";
     }
     if (this.state.exerciseName === "") {
       isError = true;
-      errors.exerciseNameError = "Exercise name  field can not be empty!";
+      errors.exerciseNameError = "Exercise name  field is required! Can not be empty!";
     }
     if (this.state.duration === "") {
       isError = true;
-      errors.durationError = "Duration field  can not be empty!";
+      errors.durationError = "Duration field is required! Can not be empty!";
     }
     if (this.state.pounds === "") {
       isError = true;
-      errors.poundsError = "Pounds field can not be empty!";
+      errors.poundsError = "Pounds field is required! Can not be empty!";
     }
     if (this.state.numberOfSets === "") {
       isError = true;
-      errors.numberOfSetsError = "Number of sets  field can not be empty!";
+      errors.numberOfSetsError = "Number of sets  field is required! Can not be empty!";
     }
     if (this.state.numberOfReps === "") {
       isError = true;
-      errors.numberOfRepsError = "Number of reps field  can not be empty!";
+      errors.numberOfRepsError = "Number of reps field is required Can not be empty!";
     }
     this.setState({
       ...this.state,
