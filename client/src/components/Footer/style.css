@@ -269,8 +269,14 @@ h1 {
    
     .jss87 {
       font-size: 14px !important;
+      height: 0 !important;
+    }
+    .jss89 {
       margin: 0 !important;
       padding: 0 !important;
+    }
+    .jss90 {
+      font-size: 14px !important;
     }
   .MuiTableCell-body-91 {
     font-size: 14px !important;
