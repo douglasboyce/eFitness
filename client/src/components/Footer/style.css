@@ -267,7 +267,9 @@ h1 {
     font-size: 14px !important;
     }
    
-   
+    .footer span {
+      font-size: 12px !important;
+    }
     .jss89 .jss90 {
       font-size: 14px !important;
       padding: 0 !important;
