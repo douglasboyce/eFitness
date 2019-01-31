@@ -267,11 +267,13 @@ h1 {
     font-size: 14px !important;
     }
    
+   
     .jss89 {
-      height: 0 !important;
-      padding: 5px !important;
       font-size: 14px !important;
-    }
+      padding: 0 !important;
+      display: table-cell;
+      text-align: left;
+  }
   /*
     .jss90 {
       padding: 0 !important;
