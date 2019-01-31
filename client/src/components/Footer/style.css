@@ -277,7 +277,7 @@ h1 {
     }
     
     body {
-      font-size: 16px !important;
+      font-size: 0 !important;
     }
   .MuiTableCell-body-91 {
     font-size: 14px !important;
