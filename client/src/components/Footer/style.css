@@ -266,15 +266,16 @@ h1 {
     background-color: #5f2525 !important;
     font-size: 14px !important;
     }
-   
+   /*
     .jss87 {
       font-size: 14px !important;
       height: 0 !important;
       padding: 0 !important;
     }
-  
+  */
     .jss90 {
       font-size: 14px !important;
+      padding: 0 !important;
     }
   .MuiTableCell-body-91 {
     font-size: 14px !important;
