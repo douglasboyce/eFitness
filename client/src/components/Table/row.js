@@ -11,6 +11,7 @@ import CheckIcon from "@material-ui/icons/CheckCircle";
 class MyTableRow extends React.Component {
   buildTextField(label, value) {
     return (
+      <div>
       <TableCell key={label}>
         <TextField
           name={label}
@@ -18,6 +19,7 @@ class MyTableRow extends React.Component {
           value={value}
         />
       </TableCell>
+      </div>
     );
   }
 

@@ -99,7 +99,7 @@ console.log(this.state);
 
   render() {
     return (
-      <div>
+      <div className="exe-form">
         <form className="form" onSubmit={this.onSubmit}>
           <TextField
             name="exerciseDay"

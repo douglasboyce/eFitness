@@ -7,7 +7,9 @@ import {
 import EditIcon from "@material-ui/icons/Edit";
 import TrashIcon from "@material-ui/icons/Delete";
 import CheckIcon from "@material-ui/icons/CheckCircle";
-
+const tbhead = {
+  backgroundColor: 'red'
+}
 class MyTRow extends React.Component {
   buildTextField(label, value) {
     return (
@@ -35,7 +37,8 @@ class MyTRow extends React.Component {
     
     const currentlyEditing = editIdx === id;
     return (
-      <TableRow key={`tr-${id}`} >
+      <div>
+      <TableRow key={`tr-${id}`}>
         {header.map((cell, index) => {
           let value = row[cell.prop];
           if (currentlyEditing) {
@@ -43,7 +46,7 @@ class MyTRow extends React.Component {
           }
           return <TableCell key={index}>{value}</TableCell>;
         })}
-        <TableCell>
+        <TableCell >
           {currentlyEditing ? (
               <CheckIcon onClick={() => stopEditing()} />
           ) : (
@@ -54,6 +57,7 @@ class MyTRow extends React.Component {
           <TrashIcon onClick={() => handleRemove(id) } />
         </TableCell>
       </TableRow>
+      </div>
     );
   }
 

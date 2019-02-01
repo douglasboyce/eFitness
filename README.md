@@ -14,6 +14,11 @@ Presenation: https://prezi.com/p/c2p9gmifh4h0/efitness/
 
 ## Understanding the application
 
+# the app demo link
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9UzbZu4fatU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br/>
+https://youtu.be/9UzbZu4fatU 
+
     Fitness is a health and exercise information app. It provides the user with information concerning their overall exercise and health information. It will display a table/chart of blood pressure values, pulse and weight (if recorded). It will also provide a list of exercise (by category, exercise type) for the user to track their overall exercise routine.
 
 ## To run on local machine

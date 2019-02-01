@@ -24,45 +24,53 @@ font-family: Georgia, Times, 'Times New Roman', serif;
   position: fixed;
   color: white;
 }
-Form {
-  background-color: #21303f !important;
+.bp-form {
+  background-color: #414657;
   padding-bottom: 20px;
   border-radius: 15px;
   box-shadow: 0 9px rgb(156, 140, 140);
+  
 }
-.form {
-  background-color: rgb(23, 34, 71) !important;
+.exe-form {
+  background-color: #303133;
+  padding-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 0 9px rgb(156, 140, 140);
+  
 }
+form label {
+  color: #fff !important;
+  font-size: 30px !important;
+  padding-left: 20px !important;
+  font-weight: 700px !important;
+  letter-spacing: 2px !important;
+}
+
 .MuiFormHelperText-root-118.MuiFormHelperText-error-119 {
   color: red !important;
   font-size: 18px;
 }
-/*
-form input {
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-size: 18px !important;
+
+
+input::placeholder {
+  color: #fff !important;
 }
-*/
+
 .about-para {
   color: darkblue !important;
   font-size: 24px !important;
 
 }
-.MuiTableCell-head-98 {
-  padding: 0 !important;
-  margin: 0 !important;  
-  padding-left: 10px !important;
+form > div input{
+  font-size: 30px !important;
+  color: #fff !important;
+  padding-left: 20px !important;
+  font-weight: 700px !important;
+  letter-spacing: 2px !important;
+}
+form > div {
+  display: grid !important;
 
-}
-.MuiTableCell-head-90 {
-  background-color: #3e8e41 !important;
-}
-.MuiInputBase-root {
-  color: whitesmoke !important;
-}
-.MuiFormHelperText-root-53 {
-  font-size: 18px !important;
-  color: whitesmoke !important;
 }
  section {
   width: 100%;
@@ -82,33 +90,9 @@ form input {
 .exe-section {
   background: radial-gradient(circle at 100%, rgb(255, 210, 210), rgb(134, 250, 203) 50%, #eee 80%, rgb(107, 140, 184) 75%);
 }
-.MuiFormControl-root-1 {
-  padding: 0 !important;
-  margin: 0 !important;
-  display: grid !important;
-  padding-left: 20px !important;
-  
-}
-/*this id good*/
-label.jss16 {
-    color: white !important;
-    font-size: 30px !important;
-    padding-left: 30px !important;
-    font-family: Georgia, Times, 'Times New Roman', serif !important; 
-}
-/*this id good*/
-div.jss1 {
-  display: block !important;
-}
 .h3 {
   color: white !important;
 }
-label + .MuiInput-formControl-24 {
-  margin-top: 24px !important;
-  font-size: 30px !important;
-  color: white !important;
-}
-
 .h3:hover {
   background-color: red;
 }
@@ -118,70 +102,20 @@ label + .MuiInput-formControl-24 {
   color: #333 !important;
   margin-top: 20px;
 }
-/*
-.jss1 {
-    color: white;
-    font-weight: 700 !important;
-    font-size: 20px !important;
-    position: relative !important;
+.exe-trow {
+  background-color: rgb(15, 81, 235) ;
 }
-*/
-.jss46{
-  font-size: 30px !important;
-}
-.jss91:hover {
-  background-color: rgb(204, 79, 79);
-}
-/*
-.jss90 {
-  color: #333 !important;
-  background-color: #3e8e41 !important;
-}
-*/
-.tbody, th {
-  color: #333 !important;
-  background-color: #3e8e41 !important;
-}
-/*
-.jss87, .jss91, .jss90  {
-  color: white !important;  
-  border: 1px solid #ddd !important;
-  font-size: 30px !important;
-}
-*/
-.tbody, td {
-  color: white !important;  
-  border: 1px solid #ddd !important;
-  font-size: 30px !important;
-  background-color: #3aa9f3 !important;
-}
+
 .tbody,  td:hover {
-background-color: rgb(231, 17, 17) !important;
+background-color: rgb(17, 170, 231);
+}
+td:hover {
+  background-color: rgb(202, 29, 29) !important;
 }
 .exe-tbody,  td:hover {
-  background-color: black !important;
+  background-color: rgb(88, 97, 92);
 }
-/*
-.jss23 {
-  position: static !important;
-}
-*/
-.jss82 {
-  padding-bottom: 20px;
-  border-radius: 20px;
-  box-shadow: 0 9px rgb(58, 52, 52);
-}
-.jss36 {
-  display: inline-block;
-}
-/* form input fields*/
-label + .jss24 {
-  width: 100% !important;
-  margin-top: 24px !important;
-  padding-left: 25px !important;
-  font-size: 30px !important;
-  color: white !important;
-}
+
 h1 {
   color: #5d5e61 !important;
   font-weight: 700 !important;
@@ -195,45 +129,24 @@ h1 {
 .about-div {
   margin-top: 100px;
 }
-.MuiInputLabel-root-5 {
-  padding: 0 !important;
-  margin: 0 !important;
-  padding-left: 20px !important;
-  color: whitesmoke !important;
-  font-size: 24px !important;
-
-}
-
 th {
   font-size: 24px !important;
   color: whitesmoke !important;
   border: 1px solid #ddd;
   text-align: left;
+  letter-spacing: 2px !important;
 }
 
 td {
-  font-size: 18px !important;
+  font-size: 24px !important;
   color: #fff !important;
   border: 1px solid #ddd !important;
-}
+  letter-spacing: 2px !important;
 
-.tbody{
-  background-color: #4286f4;
-  margin-top: 30px;
-  width: 50%;
-  display: inline-table !important;
-  padding-bottom: 20px;
-  border-radius: 15px;
-  box-shadow: 0 9px rgb(156, 140, 140);
-  }
-  
-.exe-tbody {
-  background-color: rgb(65, 65, 65) !important;
-  box-shadow: 0 5px rgb(241, 239, 239);
-  padding-bottom: 20px;
-  border-radius: 15px !important;
-  box-shadow: 0 9px rgb(156, 140, 140);
 }
+   td {
+    background-color: #333;
+  }
 .button {
   display: inline-block;
   padding: 15px 25px;
@@ -279,29 +192,21 @@ td {
     margin-top: 10px !important;
  }
  
- th{
-  font-size: 14px !important;
-  padding: 0 !important;
-
-  }
    td{
     background-color: #5f2525 !important;
     font-size: 14px !important;
     padding: 0 !important;
-
+    letter-spacing: 0.5px !important;
     }
-   
+    th {
+      font-size: 14px !important;
+      margin: 0 !important;
+      padding: 2px !important;
+      letter-spacing: 0.5px !important;
+    }
     .footer span {
       font-size: 12px !important;
     }
-  
-  
-  
-  th {
-    font-size: 12px !important;
-    margin: 0 !important;
-    padding: 5px !important;
-  }
  
   .h3:hover {
     background-color: rgb(31, 68, 231);
@@ -311,5 +216,11 @@ td {
   }
   .navbar-toggler {
     background-color: white;
+  }
+  form label {
+    font-size: 20px !important;
+  }
+  form > div input{
+    font-size: 20px !important;
   }
 }

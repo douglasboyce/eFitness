@@ -23,7 +23,7 @@ class ExerciseTable extends React.Component {
     let tableRows = [];
     for (let i=0; i<data.length; i++) {
       let tableRow = (
-        <MyTRow style={{backgroundColor: "darkblue"}}
+        <MyTRow 
           row={data[i]}
           header={header}
           handleChange={handleChange}
@@ -47,8 +47,8 @@ class ExerciseTable extends React.Component {
 
     return (
       <Table className="exe-tbody">
-        <TableHead className="table-head">
-          <TableRow>
+        <TableHead>
+          <TableRow >
             {header.map((x, i) => (
               <TableCell key={`thc-${i}`} style={{color: 'black', fontSize:'18', padding:'5'}}>{x.name}</TableCell>
             ))}

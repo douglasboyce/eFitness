@@ -93,7 +93,7 @@ class Form extends React.Component {
   };
   render() {
     return (
-      <div>
+      <div className="bp-form">
         <form onSubmit={this.onSubmit}>
           <TextField
             name="dayOfTheWeek"
