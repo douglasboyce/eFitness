@@ -141,7 +141,7 @@ label + .MuiInput-formControl-24 {
   border: 1px solid #ddd !important;
   font-size: 30px !important;
 }
-.MuiTableCell-body-91:hover {
+td:hover {
 background-color: darkred;
 }
 /*
@@ -189,12 +189,19 @@ h1 {
 .chart {
   background: radial-gradient(#d6d6d6, #9198e5);
 }
-.MuiTableCell-root-89 {
+th {
   font-size: 24px !important;
   color: whitesmoke !important;
   border: 1px solid #ddd;
   text-align: left;
 }
+
+td {
+  font-size: 18px !important;
+  color: #fff !important;
+  border: 1px solid #ddd !important;
+}
+
 .tbody{
   background-color: #4286f4;
   margin-top: 30px;
@@ -278,9 +285,8 @@ h1 {
     }
     */
   
-  .MuiTableCell-body-91,
-  .MuiTableCell-head-90 {
-    font-size: 14px !important;
+  th, td {
+    font-size: 12px !important;
     margin: 0 !important;
     padding: 5px !important;
   }
@@ -291,7 +297,7 @@ h1 {
     padding: 0 !important;
   }
   */
-  .MuiTableCell-body-91:hover {
+  td:hover {
     background-color: rgb(17, 17, 17);
     }
     /*
