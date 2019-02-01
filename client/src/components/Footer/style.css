@@ -280,22 +280,27 @@ h1 {
     body {
       font-size: 0 !important;
     }
-  .MuiTableCell-body-91 {
+  .MuiTableCell-body-91,
+  .MuiTableCell-head-90 {
     font-size: 14px !important;
     margin: 0 !important;
     padding: 5px !important;
   }
+  /*
   .MuiTableCell-head-90 {
     font-size: 14px !important;
     margin: 0 !important;
     padding: 0 !important;
   }
+  */
   .MuiTableCell-body-91:hover {
     background-color: rgb(17, 17, 17);
     }
-    .jss89 .jss91 {
-      font-size: 14px !important;
+    .jss89{
       padding: 0 !important;
+    }
+     .jss91 {
+      font-size: 14px !important;
   }
   .chart {
     background-color: #3e8e41 !important;
