@@ -153,6 +153,7 @@ label + .MuiInput-formControl-24 {
   color: white !important;  
   border: 1px solid #ddd !important;
   font-size: 30px !important;
+  background-color: #3aa9f3 !important;
 }
 td:hover {
 background-color: darkred;
@@ -276,7 +277,7 @@ td {
   .row {
     margin-top: 10px !important;
  }
- .tbody{
+ .tbody, th{
   padding: 0 !important;
   background-color: #303d35;
   width: 100% !important;
