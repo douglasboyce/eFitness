@@ -23,7 +23,7 @@ class ExerciseTable extends React.Component {
     let tableRows = [];
     for (let i=0; i<data.length; i++) {
       let tableRow = (
-        <MyTRow
+        <MyTRow style={{backgroundColor: "darkblue"}}
           row={data[i]}
           header={header}
           handleChange={handleChange}

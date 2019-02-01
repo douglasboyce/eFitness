@@ -278,15 +278,15 @@ td {
   .row {
     margin-top: 10px !important;
  }
- .tbody, th{
+ 
+ th{
+  font-size: 14px !important;
   padding: 0 !important;
-  background-color: #303d35;
-  width: 100% !important;
-  font-size: 12px !important;
- }
-  .exe-tbody, th{
+
+  }
+   td{
     background-color: #5f2525 !important;
-    font-size: 12px !important;
+    font-size: 14px !important;
     padding: 0 !important;
 
     }
@@ -295,63 +295,14 @@ td {
       font-size: 12px !important;
     }
   
-  /*
-    .jss90 {
-      padding: 0 !important;
-      font-size: 14px !important;
-    }
-    */
-  .exe-tbody th {
-
-  }
-
-  .tbody th, .tbody td {
-
-  }
- .tbody, th {
-    font-size: 12px !important;
-    margin: 0 !important;
-    padding: 5px !important;
-  }
-  .exe-tbody, th {
-    font-size: 12px !important;
-    margin: 0 !important;
-    padding: 5px !important;
-  }
-  /*
-  .MuiTableCell-head-90 {
-    font-size: 14px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-  */
-  .tbody, th:hover {
-    background-color: rgb(224, 43, 43);
-    }
-  .exe-tbody, th:hover {
-      background-color: rgb(17, 17, 17);
-      }
-    /*
-    .jss89{
-      padding: 0 !important;
-      font-size: 14px !important;
-    }
-    
-     .jss91 {
-      font-size: 14px !important;
-      padding: 0 !important;
-  }
-  .jss90 {
-    font-size: 14px !important;
-  }
-  */
-  /*
+  
+  
   th {
-    font-size: 14px !important;
+    font-size: 12px !important;
     margin: 0 !important;
     padding: 5px !important;
   }
- */
+ 
   .h3:hover {
     background-color: rgb(31, 68, 231);
   }
