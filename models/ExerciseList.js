@@ -11,8 +11,8 @@ const ExerciseSchema = new Schema({
     required: true 
   },
   pounds: { 
-    type: String, 
-    required: true 
+    type: String 
+   // required: true 
   },
   numberOfSets: {
      type: Number , 

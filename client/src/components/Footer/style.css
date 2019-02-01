@@ -277,9 +277,7 @@ h1 {
       font-size: 14px !important;
     }
     */
-    body {
-      font-size: 0 !important;
-    }
+  
   .MuiTableCell-body-91,
   .MuiTableCell-head-90 {
     font-size: 14px !important;
@@ -301,13 +299,20 @@ h1 {
       padding: 0 !important;
       font-size: 14px !important;
     }
-    */
+    
      .jss91 {
       font-size: 14px !important;
       padding: 0 !important;
   }
   .jss90 {
     font-size: 14px !important;
+  }
+  */
+  .jss91,
+  .jss90 {
+    font-size: 14px !important;
+    margin: 0 !important;
+    padding: 5px !important;
   }
   .chart {
     background-color: #3e8e41 !important;

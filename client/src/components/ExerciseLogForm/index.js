@@ -11,13 +11,13 @@ class MyForm extends React.Component {
       exerciseName: "",
       exerciseNameError: "",
       pounds: "",
-      poundsError: "",
+     // poundsError: "",
       duration: "",
       durationError: "",
       numberOfSets: "",
-      numberOfSetsError: "",
+     // numberOfSetsError: "",
       numberOfReps: "",
-      numberOfRepsError: ""
+     // numberOfRepsError: ""
     };
   }
 
@@ -34,10 +34,10 @@ console.log(this.state);
     const errors = {
       exerciseDayError: "",
       exerciseNameError: "",
-      poundsError: "",
+     // poundsError: "",
       durationError: "",
-      numberOfSetsError: "",
-      numberOfRepsError: ""
+     // numberOfSetsError: "",
+     // numberOfRepsError: ""
     };
 
     if (this.state.exerciseDay === "") {
@@ -52,6 +52,7 @@ console.log(this.state);
       isError = true;
       errors.durationError = "Duration field is required! Can not be empty!";
     }
+    /*
     if (this.state.pounds === "") {
       isError = true;
       errors.poundsError = "Pounds field is required! Can not be empty!";
@@ -64,6 +65,7 @@ console.log(this.state);
       isError = true;
       errors.numberOfRepsError = "Number of reps field is required Can not be empty!";
     }
+    */
     this.setState({
       ...this.state,
       ...errors
@@ -84,13 +86,13 @@ console.log(this.state);
         exerciseName: "",
         exerciseNameError: "",
         pounds: "",
-        poundsError: "",
+       // poundsError: "",
         duration: "",
         durationError: "",
         numberOfSets: "",
-        numberOfSetsError: "",
+       // numberOfSetsError: "",
         numberOfReps: "",
-        numberOfRepsError: ""
+       // numberOfRepsError: ""
       });
     }
   };
@@ -129,11 +131,11 @@ console.log(this.state);
             floatinglabeltext="Enter Pounds"
             value={this.state.pounds}
             onChange={e => this.change(e)}
-            helperText={this.state.poundsError}
+           // helperText={this.state.poundsError}
             type="text"
             pattern="[a-zA-Z0-9-]"
-            required
-            error = {this.state.poundsError ? true : false}
+           // required
+           // error = {this.state.poundsError ? true : false}
           />
           <TextField
             name="duration"
@@ -153,11 +155,11 @@ console.log(this.state);
             floatinglabeltext="Enter number Of Sets"
             value={this.state.numberOfSets}
             onChange={e => this.change(e)}
-            helperText={this.state.numberOfSetsError}
+           // helperText={this.state.numberOfSetsError}
             type="number"
             pattern="[0-9-]"
-            required
-            error = {this.state.numberOfSetsError ? true : false}
+           // required
+           // error = {this.state.numberOfSetsError ? true : false}
           />
           <TextField
             name="numberOfReps"
@@ -165,11 +167,11 @@ console.log(this.state);
             floatinglabeltext="Enter number Of Reps "
             value={this.state.numberOfReps}
             onChange={e => this.change(e)}
-            helperText={this.state.numberOfRepsError}
+           // helperText={this.state.numberOfRepsError}
             type="number"
             pattern="[0-9-]"
-            required
-            error = {this.state.numberOfRepsError ? true : false}
+           // required
+            //error = {this.state.numberOfRepsError ? true : false}
           />
           <Button className="button" onClick={e => this.onSubmit(e)}>
             Submit
