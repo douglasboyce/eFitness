@@ -132,11 +132,24 @@ label + .MuiInput-formControl-24 {
 .jss91:hover {
   background-color: rgb(204, 79, 79);
 }
+/*
 .jss90 {
   color: #333 !important;
   background-color: #3e8e41 !important;
 }
+*/
+.tbody, th {
+  color: #333 !important;
+  background-color: #3e8e41 !important;
+}
+/*
 .jss87, .jss91, .jss90  {
+  color: white !important;  
+  border: 1px solid #ddd !important;
+  font-size: 30px !important;
+}
+*/
+.tbody, td {
   color: white !important;  
   border: 1px solid #ddd !important;
   font-size: 30px !important;
@@ -284,8 +297,14 @@ td {
       font-size: 14px !important;
     }
     */
-  
-  th, td {
+  .exe-tbody th {
+
+  }
+
+  .tbody th, .tbody td {
+
+  }
+ .tbody th, td {
     font-size: 12px !important;
     margin: 0 !important;
     padding: 5px !important;
