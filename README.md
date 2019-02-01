@@ -4,7 +4,7 @@ A health and fitness tracker built with react.js
 
 Deployed app: https://tranquil-savannah-82874.herokuapp.com/
 
-Presenation: https://prezi.com/p/c2p9gmifh4h0/efitness/
+Presentation: https://prezi.com/p/c2p9gmifh4h0/efitness/
 
 ## Tech Overview
 
@@ -31,22 +31,22 @@ https://youtu.be/9UzbZu4fatU
 
 ## Developer Credits
 
-Douglas Boyce:
+Douglas Boyce
 
 - Github: https://github.com/douglasboyce
 - Portfolio: https://douglasboyce.github.io
 
-Grant Goings:
+Grant Goings
 
 - Github: https://github.com/Ggoings
 - Portfolio: ggoings.github.io/
 
-Thomas Fricke:
+Thomas Fricke
 
 - Github: https://github.com/TomFricke
 - Portfolio: https://tomfricke.github.io/Responsive-Portfolio/
 
-Gexahegn Worku:
+Gexahegn Worku
 
 - Github: https://github.com/gezahegnw
 - Portfolio: https://github.com/gezahegnw/gezahegnw.github.io
