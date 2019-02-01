@@ -155,8 +155,11 @@ label + .MuiInput-formControl-24 {
   font-size: 30px !important;
   background-color: #3aa9f3 !important;
 }
-td:hover {
+.tbody, td:hover {
 background-color: darkred;
+}
+ td:hover {
+  background-color: black !important;
 }
 /*
 .jss23 {
@@ -283,9 +286,11 @@ td {
   width: 100% !important;
   font-size: 12px !important;
  }
-  .exe-tbody{
+  .exe-tbody, th{
     background-color: #5f2525 !important;
-    font-size: 14px !important;
+    font-size: 12px !important;
+    padding: 0 !important;
+
     }
    
     .footer span {
@@ -305,7 +310,12 @@ td {
   .tbody th, .tbody td {
 
   }
- .tbody th, td {
+ .tbody, .table-head, th {
+    font-size: 12px !important;
+    margin: 0 !important;
+    padding: 5px !important;
+  }
+  .exe-tbody .table-head, th {
     font-size: 12px !important;
     margin: 0 !important;
     padding: 5px !important;
@@ -317,9 +327,12 @@ td {
     padding: 0 !important;
   }
   */
-  td:hover {
-    background-color: rgb(17, 17, 17);
+  .tbody, th:hover {
+    background-color: rgb(224, 43, 43);
     }
+  .exe-tbody, th:hover {
+      background-color: rgb(17, 17, 17);
+      }
     /*
     .jss89{
       padding: 0 !important;
