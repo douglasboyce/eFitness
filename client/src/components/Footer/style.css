@@ -270,10 +270,7 @@ h1 {
     .footer span {
       font-size: 12px !important;
     }
-    .jss89 .jss90 {
-      font-size: 14px !important;
-      padding: 0 !important;
-  }
+  
   /*
     .jss90 {
       padding: 0 !important;
@@ -296,7 +293,10 @@ h1 {
   .MuiTableCell-body-91:hover {
     background-color: rgb(17, 17, 17);
     }
-   
+    .jss89 .jss91 {
+      font-size: 14px !important;
+      padding: 0 !important;
+  }
   .chart {
     background-color: #3e8e41 !important;
   }
