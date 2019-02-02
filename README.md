@@ -2,7 +2,7 @@
 
 A health and fitness tracker built with react.js
 
-Deployed app: https://tranquil-savannah-82874.herokuapp.com/
+Deployed app: https://agile-temple-96461.herokuapp.com/
 
 Presentation: https://prezi.com/p/c2p9gmifh4h0/efitness/
 
